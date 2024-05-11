@@ -1,9 +1,13 @@
 [book]
-title = "Artifical Intelligence Machine Learning & Deep Learning in Glance"
+title = "AI Machine Learning & Deep Learning in Glance"
+description = "Artifical Intelligence Machine Learning & Deep Learning in Glance"
 authors = ["Abhishek Kumar"]
 language = "en"
 multilingual = false
 src = "src"
+
+[build]
+build-dir = "docs"
 
 [output.html]
 mathjax-support = true
