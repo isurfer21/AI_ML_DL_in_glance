@@ -1,0 +1,2202 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>AI Machine Learning &amp; Deep Learning in Glance</title>
+        <meta name="robots" content="noindex">
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="Artifical Intelligence Machine Learning &amp; Deep Learning in Glance">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+        <!-- MathJax -->
+        <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="Cover.html"><strong aria-hidden="true">1.</strong> Cover</a></li><li class="chapter-item expanded "><a href="Content.html"><strong aria-hidden="true">2.</strong> Content</a></li><li class="chapter-item expanded "><a href="Module_1__Programming_with_Python/Content.html"><strong aria-hidden="true">3.</strong> Module 1: Programming with Python</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="Module_1__Programming_with_Python/Foundations_of_Python_Programming.html"><strong aria-hidden="true">3.1.</strong> Foundations of Python Programming</a></li><li class="chapter-item expanded "><a href="Module_1__Programming_with_Python/Data_Structures_Loops_and_Control_Structures.html"><strong aria-hidden="true">3.2.</strong> Data Structures, Loops, and Control Structures</a></li><li class="chapter-item expanded "><a href="Module_1__Programming_with_Python/Functional_Programming_in_Python.html"><strong aria-hidden="true">3.3.</strong> Functional Programming in Python</a></li><li class="chapter-item expanded "><a href="Module_1__Programming_with_Python/Linear_Algebra_using_NumPy.html"><strong aria-hidden="true">3.4.</strong> Linear Algebra using NumPy</a></li><li class="chapter-item expanded "><a href="Module_1__Programming_with_Python/Data_Pre-processing_using_Pandas.html"><strong aria-hidden="true">3.5.</strong> Data Pre-processing using Pandas</a></li><li class="chapter-item expanded "><a href="Module_1__Programming_with_Python/Data_Visualisation_using_Matplotlib.html"><strong aria-hidden="true">3.6.</strong> Data Visualisation using Matplotlib</a></li><li class="chapter-item expanded "><a href="Module_1__Programming_with_Python/Scikit-learn.html"><strong aria-hidden="true">3.7.</strong> Scikit-learn</a></li></ol></li><li class="chapter-item expanded "><a href="Module_2__Mathematical_Foundations/Content.html"><strong aria-hidden="true">4.</strong> Module 2: Mathematical Foundations</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="Module_2__Mathematical_Foundations/Linear_Algebra.html"><strong aria-hidden="true">4.1.</strong> Linear Algebra</a></li><li class="chapter-item expanded "><a href="Module_2__Mathematical_Foundations/Optimization.html"><strong aria-hidden="true">4.2.</strong> Optimization</a></li><li class="chapter-item expanded "><a href="Module_2__Mathematical_Foundations/Probability_Theory.html"><strong aria-hidden="true">4.3.</strong> Probability Theory</a></li></ol></li><li class="chapter-item expanded "><a href="Module_3__Machine_Learning_and_Neural_Networks/Content.html"><strong aria-hidden="true">5.</strong> Module 3: Machine Learning and Neural Networks</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="Module_3__Machine_Learning_and_Neural_Networks/Introduction_to_AI-ML-DL_&_Data_Analysis.html"><strong aria-hidden="true">5.1.</strong> Introduction to AI-ML-DL & Data Analysis</a></li><li class="chapter-item expanded "><a href="Module_3__Machine_Learning_and_Neural_Networks/Linear_Regression_Model.html"><strong aria-hidden="true">5.2.</strong> Linear Regression Model</a></li><li class="chapter-item expanded "><a href="Module_3__Machine_Learning_and_Neural_Networks/Introduction__Supervised_&_Unsupervised_Learning_Classification_&_Regression_Models.html"><strong aria-hidden="true">5.3.</strong> Introduction - Supervised & Unsupervised Learning, Classification & Regression Models</a></li><li class="chapter-item expanded "><a href="Module_3__Machine_Learning_and_Neural_Networks/Bayesian_Decision_Theory__Bayesian_Classifier_Discriminant_Functions_Minimum_Error_Rate_Classification.html"><strong aria-hidden="true">5.4.</strong> Bayesian Decision Theory - Bayesian Classifier, Discriminant Functions, Minimum Error Rate Classification</a></li><li class="chapter-item expanded "><a href="Module_3__Machine_Learning_and_Neural_Networks/Naïve_Bayes_Theory_with_example.html"><strong aria-hidden="true">5.5.</strong> Naïve Bayes Theory with example</a></li><li class="chapter-item expanded "><a href="Module_3__Machine_Learning_and_Neural_Networks/Logistic_Regression_Model.html"><strong aria-hidden="true">5.6.</strong> Logistic Regression Model</a></li><li class="chapter-item expanded "><a href="Module_3__Machine_Learning_and_Neural_Networks/Parameter_Estimation-Maximum_Likelihood.html"><strong aria-hidden="true">5.7.</strong> Parameter Estimation-Maximum Likelihood</a></li><li class="chapter-item expanded "><a href="Module_3__Machine_Learning_and_Neural_Networks/Principal_Component_Aanalysis.html"><strong aria-hidden="true">5.8.</strong> Principal Component Aanalysis</a></li><li class="chapter-item expanded "><a href="Module_3__Machine_Learning_and_Neural_Networks/Non-parametric_Techniques__K-Nearest_Neighbors_&_Density_Estimation.html"><strong aria-hidden="true">5.9.</strong> Non-parametric Techniques - K-Nearest Neighbors & Density Estimation</a></li><li class="chapter-item expanded "><a href="Module_3__Machine_Learning_and_Neural_Networks/Decision_Tree__Entropy_Gini_Impurity_Index.html"><strong aria-hidden="true">5.10.</strong> Decision Tree - Entropy, Gini Impurity Index</a></li><li class="chapter-item expanded "><a href="Module_3__Machine_Learning_and_Neural_Networks/Neural_networks_components.html"><strong aria-hidden="true">5.11.</strong> Neural Networks Components</a></li><li class="chapter-item expanded "><a href="Module_3__Machine_Learning_and_Neural_Networks/Radial_Basis_Functions_and_K-means_Clustering.html"><strong aria-hidden="true">5.12.</strong> Radial Basis Functions and K-means Clustering</a></li><li class="chapter-item expanded "><a href="Module_3__Machine_Learning_and_Neural_Networks/Support_Vector_Machine_(SVM).html"><strong aria-hidden="true">5.13.</strong> Support Vector Machine (SVM)</a></li><li class="chapter-item expanded "><a href="Module_3__Machine_Learning_and_Neural_Networks/Random_Forest_Ensemble_Learning_Bagging_Boosting.html"><strong aria-hidden="true">5.14.</strong> Random Forest, Ensemble Learning, Bagging, Boosting</a></li></ol></li><li class="chapter-item expanded "><a href="Module_4__Deep_Learning/Content.html"><strong aria-hidden="true">6.</strong> Module 4: Deep Learning</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="Module_4__Deep_Learning/Basics_of_Deep_Learning.html"><strong aria-hidden="true">6.1.</strong> Basics of Deep Learning</a></li><li class="chapter-item expanded "><a href="Module_4__Deep_Learning/Deep_Learning_Architectures.html"><strong aria-hidden="true">6.2.</strong> Deep Learning Architectures</a></li><li class="chapter-item expanded "><a href="Module_4__Deep_Learning/Methodology_and_Applications.html"><strong aria-hidden="true">6.3.</strong> Methodology and Applications</a></li><li class="chapter-item expanded "><a href="Module_4__Deep_Learning/Demonstration_of_Deep_Learning_Applications.html"><strong aria-hidden="true">6.4.</strong> Demonstration of Deep Learning Applications</a></li></ol></li><li class="chapter-item expanded "><a href="Module_5__Applications_of_Machine_Learning/Content.html"><strong aria-hidden="true">7.</strong> Module 5: Applications of Machine Learning</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="Module_5__Applications_of_Machine_Learning/Computer_Vision.html"><strong aria-hidden="true">7.1.</strong> Computer Vision</a></li><li class="chapter-item expanded "><a href="Module_5__Applications_of_Machine_Learning/Speech_Recognition.html"><strong aria-hidden="true">7.2.</strong> Speech Recognition</a></li><li class="chapter-item expanded "><a href="Module_5__Applications_of_Machine_Learning/NLP.html"><strong aria-hidden="true">7.3.</strong> NLP</a></li><li class="chapter-item expanded "><a href="Module_5__Applications_of_Machine_Learning/Advanced_topic__ChatGPT.html"><strong aria-hidden="true">7.4.</strong> Advanced topic - ChatGPT</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">AI Machine Learning &amp; Deep Learning in Glance</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="artifical-intelligence-machine-learning--deep-learning-in-glance"><a class="header" href="#artifical-intelligence-machine-learning--deep-learning-in-glance">Artifical Intelligence Machine Learning &amp; Deep Learning in Glance</a></h1>
+<?xml version="1.0" encoding="utf-8"?><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 119.25 122.88" style="enable-background:new 0 0 119.25 122.88" xml:space="preserve"><g><path d="M86.28,104.11c-0.47-0.19-0.98-0.3-1.52-0.3c-0.54,0-1.05,0.11-1.52,0.3c-0.47,0.2-0.9,0.48-1.25,0.84l-0.03,0.02 c-0.2,0.2-0.39,0.43-0.54,0.68c-0.08,0.13-0.16,0.27-0.23,0.42h-6.31v-5.48c-0.97,0.45-1.98,0.79-3.01,1 c-0.18,0.04-0.35,0.07-0.53,0.1v6.14c0,0.49,0.2,0.93,0.52,1.25c0.32,0.32,0.76,0.52,1.25,0.52h8.14c0.06,0.12,0.13,0.24,0.21,0.36 c0.14,0.21,0.3,0.41,0.48,0.59l0.03,0.03c0.36,0.36,0.8,0.66,1.29,0.86c0.47,0.19,0.98,0.3,1.52,0.3c0.52,0,1.03-0.1,1.49-0.29 l0.03-0.01c0.49-0.2,0.92-0.5,1.29-0.86c0.36-0.36,0.66-0.8,0.86-1.29c0.19-0.47,0.3-0.98,0.3-1.52c0-0.53-0.11-1.04-0.3-1.52 c-0.2-0.49-0.5-0.93-0.86-1.29C87.21,104.61,86.77,104.31,86.28,104.11L86.28,104.11z M57.43,66.61h-7.4l-1.06,3.48h-6.66 l7.95-21.12h7.14l7.92,21.12h-6.83L57.43,66.61L57.43,66.61z M56.05,62.03l-2.31-7.59l-2.32,7.59H56.05L56.05,62.03z M67.16,48.96 h6.55v21.12h-6.55V48.96L67.16,48.96z M62.17,27.31c-1.08,0.78-2.08,1.83-2.95,3.19c-0.04,0.07-0.1,0.13-0.17,0.17 c-0.27,0.17-0.63,0.09-0.8-0.17c-0.87-1.36-1.87-2.41-2.95-3.19c-1.16-0.84-2.41-1.37-3.7-1.63l-0.02,0 c-1.26-0.26-2.55-0.26-3.79-0.04c-1.31,0.23-2.58,0.71-3.72,1.37c-1.13,0.66-2.15,1.51-3,2.49c-0.82,0.95-1.48,2.04-1.91,3.21l0,0 c-0.07,0.18-0.13,0.37-0.19,0.57c-0.05,0.18-0.11,0.38-0.15,0.58c-0.05,0.26-0.27,0.45-0.55,0.46c-1.34,0.2-2.67,0.69-3.91,1.42 c-1.26,0.75-2.43,1.77-3.44,2.99c-1,1.22-1.84,2.66-2.44,4.26c-0.56,1.5-0.9,3.15-0.97,4.9c-0.01,0.23-0.01,0.45-0.01,0.68 c0,0.21,0.01,0.43,0.01,0.66c0.01,0.19-0.07,0.39-0.24,0.51c-0.82,0.59-1.56,1.2-2.22,1.83c-0.67,0.65-1.26,1.32-1.77,2.01 c-0.83,1.13-1.44,2.31-1.85,3.5c-0.43,1.24-0.64,2.51-0.66,3.76c-0.01,1.2,0.15,2.39,0.49,3.54c0.34,1.17,0.86,2.31,1.53,3.37l0,0 c0.38,0.61,0.81,1.21,1.28,1.77c0.48,0.57,1,1.11,1.56,1.62c0.14,0.13,0.22,0.34,0.18,0.54c-0.16,0.76-0.24,1.51-0.27,2.25 c-0.02,0.76,0.02,1.51,0.12,2.24c0.19,1.34,0.58,2.62,1.13,3.8c0.58,1.26,1.34,2.41,2.22,3.42c0.85,0.99,1.82,1.85,2.86,2.56 c1.05,0.72,2.16,1.28,3.3,1.67c0.51,0.17,1.03,0.31,1.56,0.41c0.5,0.1,1,0.16,1.49,0.18c0.27-0.01,0.52,0.18,0.58,0.46 c0.26,1.19,0.74,2.31,1.4,3.32c0.69,1.06,1.56,2,2.56,2.78c1.26,0.98,2.74,1.72,4.3,2.11c1.47,0.37,3.02,0.44,4.54,0.12 c1.36-0.28,2.68-0.86,3.9-1.78c1.12-0.85,2.16-1.99,3.03-3.47c0.05-0.09,0.13-0.16,0.23-0.21c0.28-0.15,0.63-0.04,0.78,0.24 c0.72,1.34,1.6,2.41,2.58,3.22c1.06,0.87,2.23,1.46,3.46,1.8c1.57,0.43,3.21,0.43,4.8,0.1c1.7-0.35,3.34-1.09,4.75-2.11 c1.11-0.79,2.09-1.76,2.87-2.86c0.74-1.03,1.29-2.18,1.61-3.39c0.04-0.23,0.22-0.43,0.47-0.47c1.47-0.26,2.92-0.87,4.25-1.78 c1.33-0.91,2.54-2.11,3.53-3.54c0.91-1.32,1.64-2.84,2.11-4.5c0.44-1.55,0.65-3.23,0.58-5c-0.02-0.2,0.07-0.4,0.25-0.52 c0.86-0.59,1.62-1.21,2.3-1.84c0.69-0.66,1.3-1.34,1.82-2.05l0,0c0.8-1.08,1.39-2.2,1.8-3.35c0.42-1.19,0.64-2.4,0.68-3.61 c0.03-1.17-0.11-2.33-0.41-3.47c-0.3-1.15-0.77-2.26-1.38-3.31l-0.02-0.02c-0.4-0.69-0.87-1.35-1.39-1.99 c-0.52-0.64-1.11-1.24-1.74-1.81c-0.15-0.13-0.23-0.34-0.19-0.55c0.14-0.69,0.23-1.38,0.26-2.06c0.03-0.69,0.01-1.37-0.06-2.04 c-0.15-1.39-0.52-2.71-1.06-3.94c-0.57-1.3-1.33-2.5-2.22-3.55c-0.86-1.02-1.85-1.91-2.91-2.65c-1.06-0.74-2.19-1.32-3.34-1.71 l-0.03-0.01c-0.61-0.21-1.23-0.36-1.84-0.46l-0.02,0c-0.6-0.1-1.2-0.14-1.79-0.13c-0.27,0.02-0.53-0.16-0.6-0.44 c-0.1-0.41-0.23-0.81-0.38-1.2c-0.16-0.4-0.34-0.79-0.55-1.18c-0.54-1-1.25-1.92-2.08-2.71c-0.85-0.81-1.82-1.5-2.86-2.03 c-1.07-0.54-2.24-0.92-3.44-1.09c-1.14-0.16-2.31-0.14-3.46,0.1C64.6,25.94,63.33,26.47,62.17,27.31L62.17,27.31z M78.52,38.57 c0.07-0.22,0.27-0.39,0.52-0.41c0.42-0.03,0.85-0.01,1.28,0.06c0.44,0.07,0.88,0.18,1.32,0.33c0.83,0.28,1.66,0.71,2.43,1.25 c0.76,0.53,1.48,1.18,2.1,1.92l0.01,0.02c0.65,0.77,1.2,1.63,1.61,2.57c0.39,0.88,0.65,1.82,0.76,2.81 c0.07,0.66,0.07,1.35-0.01,2.05c-0.07,0.65-0.22,1.32-0.45,1.99l-0.01,0.04c-0.14,0.42-0.13,0.86,0,1.25c0.14,0.4,0.4,0.76,0.77,1 l0.03,0.02c0.7,0.52,1.32,1.09,1.86,1.69c0.56,0.61,1.04,1.27,1.44,1.95c0.44,0.75,0.78,1.53,0.99,2.33 c0.22,0.79,0.32,1.59,0.29,2.38c-0.02,0.82-0.18,1.64-0.47,2.45c-0.28,0.77-0.69,1.53-1.23,2.27l-0.01,0.01 c-0.49,0.67-1.11,1.33-1.84,1.96c-0.7,0.6-1.51,1.17-2.44,1.72l-0.03,0.02c-0.37,0.21-0.64,0.53-0.8,0.9 c-0.16,0.37-0.21,0.78-0.13,1.18l0.01,0.08c0.19,1.53,0.1,2.99-0.21,4.32c-0.34,1.45-0.93,2.75-1.7,3.86 c-0.59,0.85-1.27,1.58-2,2.16c-0.75,0.6-1.56,1.04-2.39,1.31l-0.01,0c-0.3,0.09-0.63-0.08-0.72-0.38 c-1.13-3.69-3.08-4.88-6.38-6.58l-0.07-0.04c-0.46-0.22-0.96-0.24-1.41-0.1c-0.45,0.14-0.84,0.45-1.07,0.9l-0.03,0.06 c-0.22,0.46-0.24,0.96-0.1,1.41c0.15,0.45,0.47,0.85,0.93,1.09c2.76,1.41,4.8,2.48,4.77,5.94c-0.01,1.03-0.33,2.03-0.87,2.93 c-0.57,0.95-1.39,1.8-2.34,2.49c-0.97,0.7-2.06,1.21-3.18,1.46c-1.07,0.25-2.17,0.26-3.2-0.02c-1.74-0.48-2.87-1.64-3.63-3.05 c-0.72-1.34-1.12-2.9-1.41-4.32c-0.02-0.05-0.02-0.11-0.02-0.16c0-0.72-0.56-1.19-1.29-1.4c-0.32-0.1-0.67-0.14-1.01-0.14 c-0.35,0-0.69,0.05-1.01,0.14c-0.72,0.22-1.28,0.69-1.28,1.4c0,0.05-0.01,0.09-0.02,0.14c-0.56,2.22-1.37,3.89-2.32,5.09 c-1.11,1.41-2.41,2.18-3.75,2.46c-0.98,0.2-1.99,0.15-2.95-0.1c-1.01-0.27-1.97-0.76-2.81-1.4c-0.83-0.65-1.52-1.44-2-2.33 c-0.46-0.85-0.73-1.79-0.73-2.75c0-3.64,2.2-4.86,5.11-6.35c0.46-0.24,0.78-0.64,0.93-1.09c0.15-0.46,0.12-0.97-0.11-1.44 c-0.24-0.46-0.64-0.78-1.09-0.93c-0.45-0.14-0.95-0.12-1.41,0.1l-0.03,0.01c-3.43,1.75-5.48,3.03-6.71,6.84 c-0.07,0.25-0.31,0.44-0.58,0.43c-0.34-0.01-0.68-0.05-1.03-0.12c-0.34-0.07-0.68-0.16-1-0.28c-0.81-0.28-1.62-0.69-2.38-1.21 c-0.75-0.52-1.45-1.14-2.07-1.86c-0.64-0.74-1.19-1.57-1.61-2.48c-0.4-0.85-0.68-1.76-0.82-2.71l0-0.02 c-0.1-0.7-0.12-1.43-0.04-2.18c0.07-0.7,0.22-1.43,0.47-2.15l0.01-0.03c0.14-0.41,0.13-0.84,0.01-1.22l-0.01-0.02 c-0.13-0.4-0.39-0.75-0.75-1l-0.02-0.02c-0.64-0.48-1.22-0.99-1.73-1.55c-0.52-0.56-0.98-1.16-1.36-1.78 c-0.46-0.75-0.82-1.55-1.06-2.37c-0.23-0.8-0.35-1.62-0.34-2.46c0.01-0.85,0.16-1.72,0.46-2.57c0.29-0.81,0.71-1.62,1.29-2.41 c0.49-0.67,1.09-1.33,1.81-1.96c0.69-0.61,1.47-1.19,2.37-1.74c0.33-0.2,0.57-0.48,0.73-0.8l0.01-0.03 c0.16-0.33,0.22-0.7,0.17-1.07c-0.01-0.04-0.01-0.08-0.01-0.12l0-0.02c-0.05-0.35-0.08-0.7-0.1-1.04c-0.02-0.37-0.02-0.74-0.01-1.1 c0.05-1.31,0.3-2.54,0.71-3.65c0.44-1.19,1.06-2.26,1.8-3.17c0.61-0.75,1.31-1.38,2.04-1.87c0.73-0.49,1.5-0.84,2.29-1.04l0,0 c0.3-0.09,0.63,0.08,0.72,0.38c0.62,1.96,1.4,3.19,2.89,4.58l0.06,0.05c0.37,0.34,0.85,0.5,1.32,0.48 c0.47-0.02,0.93-0.21,1.27-0.58l0.03-0.04c0.34-0.37,0.5-0.85,0.48-1.32c-0.02-0.47-0.22-0.94-0.6-1.3 c-1.2-1.11-1.47-1.8-1.83-2.92c-0.42-1.29-0.35-2.55,0.06-3.67c0.28-0.77,0.72-1.49,1.28-2.12c0.55-0.63,1.22-1.19,1.96-1.62 l0.03-0.02c0.76-0.44,1.58-0.76,2.43-0.92c0.81-0.15,1.64-0.16,2.45,0.01c1.14,0.24,2.26,0.84,3.25,1.88 c0.87,0.91,1.64,2.17,2.25,3.83l0.01,0.02c0.21,0.65,0.89,1.03,1.69,1.18c0.36,0.07,0.74,0.09,1.11,0.07l0.01,0 c0.38-0.02,0.74-0.09,1.08-0.2c0.6-0.2,1.07-0.52,1.18-0.93v-0.23c0-1.16,0.69-2.39,1.64-3.4c1.04-1.1,2.43-1.97,3.6-2.21 c0.74-0.15,1.49-0.16,2.22-0.05c0.76,0.12,1.5,0.36,2.2,0.71L71.1,30c0.71,0.36,1.36,0.82,1.93,1.36c0.56,0.54,1.04,1.15,1.4,1.82 c0.57,1.05,0.83,2.25,0.65,3.52c-0.16,1.11-0.2,1.81-1.13,2.92l-0.01,0.01c-0.33,0.39-0.47,0.88-0.43,1.36 c0.04,0.46,0.25,0.91,0.62,1.23l0.06,0.05c0.39,0.32,0.87,0.45,1.34,0.41c0.46-0.04,0.91-0.25,1.23-0.62l0.05-0.07 C77.77,40.85,78.08,40.01,78.52,38.57L78.52,38.57z M100.48,87.51c-0.19-0.47-0.3-0.98-0.3-1.52c0-0.54,0.11-1.05,0.3-1.52 c0.2-0.47,0.48-0.9,0.84-1.25l0.02-0.03c0.2-0.2,0.43-0.39,0.68-0.54c0.13-0.08,0.27-0.16,0.42-0.23v-6.31h-7.76 c0.01-0.41,0.01-0.82-0.01-1.24c-0.02-0.23,0.08-0.46,0.28-0.59c0.8-0.55,1.53-1.12,2.19-1.71h7.06c0.49,0,0.93,0.2,1.25,0.52 c0.32,0.32,0.52,0.76,0.52,1.25v8.14c0.12,0.06,0.24,0.13,0.36,0.21c0.21,0.14,0.41,0.3,0.59,0.48l0.03,0.03 c0.36,0.36,0.66,0.8,0.86,1.29c0.19,0.47,0.3,0.98,0.3,1.52c0,0.52-0.1,1.02-0.29,1.49l-0.01,0.03c-0.2,0.49-0.5,0.92-0.86,1.29 c-0.36,0.36-0.8,0.66-1.29,0.86c-0.47,0.19-0.98,0.3-1.52,0.3c-0.53,0-1.04-0.11-1.52-0.3c-0.49-0.2-0.93-0.5-1.29-0.86 C100.98,88.44,100.68,88,100.48,87.51L100.48,87.51z M111.72,67.26h-10.55c0.18-0.39,0.34-0.78,0.48-1.18 c0.28-0.78,0.48-1.57,0.6-2.36h9.47c0.07-0.13,0.14-0.26,0.22-0.39c0.15-0.24,0.33-0.46,0.52-0.65c0.37-0.37,0.8-0.66,1.29-0.86 c0.47-0.19,0.98-0.3,1.52-0.3c0.52,0,1.02,0.1,1.49,0.29l0.03,0.01c0.49,0.2,0.92,0.5,1.29,0.86c0.36,0.36,0.66,0.8,0.86,1.29 c0.19,0.47,0.3,0.98,0.3,1.52c0,0.53-0.11,1.04-0.3,1.52c-0.2,0.49-0.5,0.93-0.86,1.29c-0.36,0.36-0.8,0.66-1.29,0.86 c-0.47,0.19-0.98,0.3-1.52,0.3c-0.52,0-1.02-0.1-1.49-0.29l-0.03-0.01c-0.49-0.2-0.92-0.5-1.29-0.86c-0.19-0.19-0.36-0.4-0.51-0.63 l-0.02-0.03C111.86,67.52,111.79,67.39,111.72,67.26L111.72,67.26z M115.08,57.58h-13.27c-0.34-1.12-0.82-2.21-1.42-3.25 l-0.02-0.03c-0.05-0.09-0.1-0.17-0.15-0.26h13.1V42.49c-0.1-0.06-0.2-0.12-0.3-0.19c-0.2-0.14-0.38-0.29-0.55-0.46 c-0.36-0.36-0.66-0.8-0.86-1.29c-0.19-0.47-0.3-0.98-0.3-1.52c0-0.53,0.11-1.05,0.3-1.52c0.2-0.49,0.5-0.92,0.86-1.29 c0.36-0.36,0.8-0.66,1.29-0.86c0.47-0.19,0.98-0.3,1.52-0.3c0.53,0,1.04,0.11,1.52,0.3c0.49,0.2,0.93,0.5,1.29,0.86 c0.36,0.36,0.66,0.8,0.86,1.29c0.19,0.47,0.3,0.98,0.3,1.52c0,0.52-0.1,1.02-0.29,1.49l-0.01,0.03c-0.2,0.49-0.5,0.92-0.86,1.29 c-0.22,0.22-0.48,0.42-0.75,0.59c-0.15,0.09-0.32,0.18-0.48,0.25v13.12c0,0.49-0.2,0.93-0.52,1.25 C116.01,57.38,115.57,57.58,115.08,57.58L115.08,57.58z M101.21,49.04h-4.52c0.12-0.66,0.19-1.32,0.22-1.98 c0.02-0.53,0.02-1.05-0.01-1.56h2.54v-5.22c-0.14-0.07-0.27-0.14-0.4-0.23c-0.24-0.15-0.46-0.33-0.67-0.54l0,0 c-0.36-0.36-0.66-0.8-0.86-1.29c-0.19-0.47-0.3-0.98-0.3-1.51c0-0.53,0.11-1.04,0.3-1.52c0.2-0.47,0.48-0.9,0.83-1.26l0.03-0.03 c0.36-0.36,0.8-0.66,1.29-0.86c0.47-0.19,0.98-0.3,1.52-0.3c0.54,0,1.05,0.11,1.52,0.3c0.47,0.2,0.9,0.48,1.26,0.84l0.03,0.02 c0.36,0.36,0.65,0.78,0.85,1.26l0.01,0.03c0.19,0.47,0.3,0.98,0.3,1.52c0,0.53-0.11,1.05-0.3,1.52c-0.2,0.47-0.48,0.9-0.83,1.26 l-0.03,0.03c-0.19,0.19-0.4,0.36-0.64,0.52c-0.12,0.08-0.24,0.15-0.37,0.21v7.02c0,0.49-0.2,0.93-0.52,1.25 C102.14,48.84,101.69,49.04,101.21,49.04L101.21,49.04z M31.13,18.77c0.47,0.19,0.98,0.3,1.52,0.3c0.54,0,1.05-0.11,1.52-0.3 c0.47-0.2,0.9-0.48,1.25-0.84l0.03-0.02c0.2-0.2,0.39-0.43,0.54-0.68c0.08-0.13,0.16-0.27,0.23-0.42h6.31v5.45 c1.11-0.59,2.31-1.02,3.54-1.27v-5.95c0-0.49-0.2-0.93-0.52-1.25c-0.32-0.32-0.76-0.52-1.25-0.52h-8.14 c-0.06-0.12-0.13-0.24-0.21-0.36c-0.14-0.21-0.3-0.41-0.48-0.59l-0.03-0.03c-0.36-0.36-0.8-0.66-1.29-0.86 c-0.47-0.19-0.98-0.3-1.52-0.3c-0.52,0-1.03,0.1-1.49,0.29l-0.03,0.01c-0.49,0.2-0.92,0.5-1.29,0.86c-0.36,0.36-0.66,0.8-0.86,1.29 c-0.19,0.47-0.3,0.98-0.3,1.52c0,0.53,0.11,1.04,0.3,1.52c0.2,0.49,0.5,0.93,0.86,1.29C30.21,18.27,30.64,18.57,31.13,18.77 L31.13,18.77z M51.39,7.53v13.66c1.18,0.34,2.33,0.88,3.41,1.66l0.12,0.09c0-0.03,0.01-0.06,0.01-0.09V7.53 c0.13-0.07,0.26-0.14,0.39-0.22c0.24-0.15,0.46-0.33,0.65-0.52c0.36-0.37,0.66-0.8,0.86-1.29c0.19-0.47,0.3-0.98,0.3-1.52 c0-0.52-0.1-1.02-0.29-1.49l-0.01-0.03c-0.2-0.49-0.5-0.92-0.86-1.29c-0.36-0.36-0.8-0.66-1.29-0.86c-0.47-0.19-0.98-0.3-1.52-0.3 c-0.53,0-1.04,0.11-1.52,0.3c-0.49,0.2-0.93,0.5-1.29,0.86c-0.36,0.36-0.66,0.8-0.86,1.29c-0.19,0.47-0.3,0.98-0.3,1.52 c0,0.52,0.1,1.02,0.29,1.49l0.01,0.03c0.2,0.49,0.5,0.92,0.86,1.29c0.19,0.19,0.4,0.36,0.63,0.51L51,7.31 C51.13,7.39,51.25,7.46,51.39,7.53L51.39,7.53z M61.06,4.17v19.98c0.48-0.49,0.99-0.92,1.51-1.3c0.65-0.47,1.33-0.86,2.03-1.16 V5.93h11.55c0.06,0.1,0.12,0.2,0.19,0.3c0.14,0.2,0.29,0.38,0.46,0.55c0.36,0.36,0.8,0.66,1.29,0.86c0.47,0.19,0.98,0.3,1.52,0.3 c0.53,0,1.05-0.11,1.52-0.3c0.49-0.2,0.93-0.5,1.29-0.86c0.36-0.36,0.66-0.8,0.86-1.29c0.19-0.47,0.3-0.98,0.3-1.52 c0-0.53-0.11-1.04-0.3-1.52c-0.2-0.49-0.5-0.93-0.86-1.29C82.04,0.8,81.6,0.5,81.11,0.3C80.64,0.11,80.13,0,79.6,0 c-0.52,0-1.02,0.1-1.49,0.29L78.08,0.3c-0.49,0.2-0.92,0.5-1.29,0.86c-0.22,0.22-0.42,0.48-0.59,0.75 c-0.09,0.15-0.18,0.32-0.25,0.48H62.83c-0.49,0-0.93,0.2-1.25,0.52C61.26,3.24,61.06,3.68,61.06,4.17L61.06,4.17z M69.6,18.04v2.74 c0.36,0.02,0.73,0.05,1.09,0.11c0.84,0.12,1.66,0.33,2.45,0.62v-1.69h5.22c0.07,0.14,0.14,0.27,0.23,0.4 c0.15,0.24,0.33,0.46,0.54,0.67l0,0c0.36,0.36,0.8,0.66,1.29,0.86c0.47,0.19,0.98,0.3,1.51,0.3s1.04-0.11,1.52-0.3 c0.47-0.2,0.9-0.48,1.26-0.83l0.03-0.03c0.36-0.36,0.66-0.8,0.86-1.29c0.19-0.47,0.3-0.98,0.3-1.52c0-0.54-0.11-1.05-0.3-1.52 c-0.2-0.47-0.48-0.9-0.84-1.26l-0.02-0.03c-0.36-0.36-0.78-0.65-1.26-0.85l-0.03-0.01c-0.47-0.19-0.98-0.3-1.52-0.3 c-0.53,0-1.05,0.11-1.52,0.3c-0.47,0.2-0.9,0.48-1.26,0.83l-0.03,0.03c-0.19,0.19-0.36,0.4-0.52,0.64 c-0.08,0.12-0.15,0.24-0.21,0.37h-7.02c-0.49,0-0.93,0.2-1.25,0.52C69.8,17.11,69.6,17.55,69.6,18.04L69.6,18.04z M18.77,35.2 c0.19,0.47,0.3,0.98,0.3,1.52c0,0.54-0.11,1.05-0.3,1.52c-0.2,0.47-0.48,0.9-0.84,1.25l-0.02,0.03c-0.2,0.2-0.43,0.39-0.68,0.54 c-0.13,0.08-0.27,0.16-0.42,0.23v6.31h6.55l0,0.31c0,0.24,0.01,0.49,0.02,0.75c0.02,0.22-0.08,0.44-0.27,0.58 c-0.86,0.61-1.63,1.25-2.33,1.9h-5.72c-0.49,0-0.93-0.2-1.25-0.52c-0.32-0.32-0.52-0.76-0.52-1.25v-8.14 c-0.12-0.06-0.24-0.13-0.36-0.21c-0.21-0.14-0.41-0.3-0.59-0.48l-0.03-0.03c-0.36-0.36-0.66-0.8-0.86-1.29 c-0.19-0.47-0.3-0.98-0.3-1.52c0-0.52,0.1-1.02,0.29-1.49l0.01-0.03c0.2-0.49,0.5-0.92,0.86-1.29c0.36-0.36,0.8-0.66,1.29-0.86 c0.47-0.19,0.98-0.3,1.52-0.3c0.53,0,1.04,0.11,1.52,0.3c0.49,0.2,0.93,0.5,1.29,0.86C18.27,34.27,18.57,34.71,18.77,35.2 L18.77,35.2z M7.53,55.45h9.4c-0.16,0.36-0.3,0.73-0.43,1.09c-0.28,0.81-0.48,1.62-0.6,2.44H7.53c-0.07,0.13-0.14,0.26-0.22,0.39 c-0.15,0.24-0.33,0.46-0.52,0.65c-0.37,0.37-0.8,0.66-1.29,0.86c-0.47,0.19-0.98,0.3-1.52,0.3c-0.52,0-1.02-0.1-1.49-0.29 l-0.03-0.01c-0.49-0.2-0.92-0.5-1.29-0.86c-0.36-0.36-0.66-0.8-0.86-1.29c-0.19-0.47-0.3-0.98-0.3-1.52c0-0.53,0.11-1.04,0.3-1.52 c0.2-0.49,0.5-0.93,0.86-1.29c0.36-0.36,0.8-0.66,1.29-0.86c0.47-0.19,0.98-0.3,1.52-0.3c0.52,0,1.02,0.1,1.49,0.29l0.03,0.01 c0.49,0.2,0.92,0.5,1.29,0.86c0.19,0.19,0.36,0.4,0.51,0.63l0.02,0.03C7.39,55.19,7.46,55.32,7.53,55.45L7.53,55.45z M4.17,65.13 H16.4c0.38,1.21,0.93,2.38,1.63,3.49l0,0.01l0.02,0.04H5.93v11.55c0.1,0.06,0.2,0.12,0.3,0.19c0.2,0.14,0.38,0.29,0.55,0.46 c0.36,0.36,0.66,0.8,0.86,1.29c0.19,0.47,0.3,0.98,0.3,1.52c0,0.53-0.11,1.05-0.3,1.52c-0.2,0.49-0.5,0.92-0.86,1.29 c-0.36,0.36-0.8,0.66-1.29,0.86c-0.47,0.19-0.98,0.3-1.52,0.3c-0.53,0-1.04-0.11-1.52-0.3c-0.49-0.2-0.93-0.5-1.29-0.86 C0.8,86.1,0.5,85.66,0.3,85.18C0.11,84.71,0,84.2,0,83.66c0-0.52,0.1-1.02,0.29-1.49l0.01-0.03c0.2-0.49,0.5-0.92,0.86-1.29 c0.22-0.22,0.48-0.42,0.75-0.59c0.15-0.09,0.32-0.18,0.48-0.25V66.89c0-0.49,0.2-0.93,0.52-1.25C3.24,65.33,3.68,65.13,4.17,65.13 L4.17,65.13z M18.04,73.67h3.3c-0.11,0.66-0.17,1.31-0.19,1.95c-0.02,0.54-0.01,1.07,0.03,1.59h-1.37v5.22 c0.14,0.07,0.27,0.14,0.4,0.23c0.24,0.15,0.46,0.33,0.67,0.54l0,0c0.36,0.36,0.66,0.8,0.86,1.29c0.19,0.47,0.3,0.98,0.3,1.52 s-0.11,1.04-0.3,1.52c-0.2,0.47-0.48,0.9-0.83,1.26l-0.03,0.03c-0.36,0.36-0.8,0.66-1.29,0.86c-0.47,0.19-0.98,0.3-1.52,0.3 c-0.54,0-1.05-0.11-1.52-0.3c-0.47-0.2-0.9-0.48-1.26-0.84l-0.03-0.02c-0.36-0.36-0.65-0.78-0.85-1.26l-0.01-0.03 c-0.19-0.47-0.3-0.98-0.3-1.52c0-0.53,0.11-1.05,0.3-1.52c0.2-0.47,0.48-0.9,0.83-1.26l0.03-0.03c0.19-0.19,0.4-0.36,0.64-0.52 c0.12-0.08,0.24-0.15,0.37-0.21v-7.02c0-0.49,0.2-0.93,0.52-1.25C17.11,73.86,17.55,73.67,18.04,73.67L18.04,73.67z M66.03,115.35 v-13.99c-1.25-0.39-2.43-1.02-3.51-1.91l-0.02-0.02v15.93c-0.13,0.07-0.26,0.14-0.39,0.22c-0.24,0.15-0.46,0.33-0.65,0.52 c-0.36,0.37-0.66,0.8-0.86,1.29c-0.19,0.47-0.3,0.98-0.3,1.52c0,0.52,0.1,1.02,0.29,1.49l0.01,0.03c0.2,0.49,0.5,0.92,0.86,1.29 c0.36,0.36,0.8,0.66,1.29,0.86c0.47,0.19,0.98,0.3,1.52,0.3c0.53,0,1.04-0.11,1.52-0.3c0.49-0.2,0.93-0.5,1.29-0.86 c0.36-0.36,0.66-0.8,0.86-1.29c0.19-0.47,0.3-0.98,0.3-1.52c0-0.52-0.1-1.02-0.29-1.49l-0.01-0.03c-0.2-0.49-0.5-0.92-0.86-1.29 c-0.19-0.19-0.4-0.36-0.63-0.51l-0.03-0.02C66.29,115.49,66.16,115.42,66.03,115.35L66.03,115.35z M56.35,118.71V98.55 c-0.42,0.43-0.86,0.81-1.32,1.16c-0.71,0.54-1.45,0.97-2.22,1.31v15.94H41.26c-0.06-0.1-0.12-0.2-0.19-0.3 c-0.14-0.2-0.29-0.38-0.46-0.55c-0.36-0.36-0.8-0.66-1.29-0.86c-0.47-0.19-0.98-0.3-1.52-0.3c-0.53,0-1.05,0.11-1.52,0.3 c-0.49,0.2-0.92,0.5-1.29,0.86c-0.36,0.36-0.66,0.8-0.86,1.29c-0.19,0.47-0.3,0.98-0.3,1.52c0,0.53,0.11,1.04,0.3,1.52 c0.2,0.49,0.5,0.93,0.86,1.29c0.36,0.36,0.8,0.66,1.29,0.86c0.47,0.19,0.98,0.3,1.52,0.3c0.52,0,1.02-0.1,1.49-0.29l0.03-0.01 c0.49-0.2,0.92-0.5,1.29-0.86c0.22-0.22,0.42-0.48,0.59-0.75c0.09-0.15,0.18-0.32,0.25-0.48h13.12c0.49,0,0.93-0.2,1.25-0.52 C56.15,119.64,56.35,119.2,56.35,118.71L56.35,118.71z M47.81,104.84v-2.91c-0.78-0.04-1.56-0.16-2.32-0.35 c-0.41-0.1-0.82-0.23-1.22-0.37v1.87h-5.22c-0.07-0.14-0.14-0.27-0.23-0.4c-0.15-0.24-0.33-0.46-0.54-0.67l0,0 c-0.36-0.36-0.8-0.66-1.29-0.86c-0.47-0.19-0.98-0.3-1.51-0.3c-0.53,0-1.04,0.11-1.52,0.3c-0.47,0.2-0.9,0.48-1.26,0.83L32.67,102 c-0.36,0.36-0.66,0.8-0.86,1.29c-0.19,0.47-0.3,0.98-0.3,1.52c0,0.54,0.11,1.05,0.3,1.52c0.2,0.47,0.48,0.9,0.84,1.26l0.02,0.03 c0.36,0.36,0.78,0.65,1.26,0.85l0.03,0.01c0.47,0.19,0.98,0.3,1.52,0.3c0.53,0,1.04-0.11,1.52-0.3c0.47-0.2,0.9-0.48,1.26-0.83 l0.03-0.03c0.19-0.19,0.36-0.4,0.52-0.64c0.08-0.12,0.15-0.24,0.21-0.37h7.02c0.49,0,0.93-0.2,1.25-0.52 C47.61,105.77,47.81,105.33,47.81,104.84L47.81,104.84z"/></g></svg>
+<p>Author by <strong>Abhishek Kumar</strong></p>
+<p>Copyright © <strong>2024</strong> by <strong>Abhishek Kumar</strong></p>
+<p>All rights reserved.</p>
+<p>No portion of this book may be reproduced in any form without written permission from the publisher or author, except as permitted by U.S. copyright law.</p>
+<p>This publication is designed to provide accurate and authoritative information in regard to the subject matter covered. It is sold with the understanding that neither the author nor the publisher is engaged in rendering legal, investment, accounting or other professional services. While the publisher and author have used their best efforts in preparing this book, they make no representations or warranties with respect to the accuracy or completeness of the contents of this book and specifically disclaim any implied warranties of merchantability or fitness for a particular purpose. No warranty may be created or extended by sales representatives or written sales materials. The advice and strategies contained herein may not be suitable for your situation. You should consult with a professional when appropriate. Neither the publisher nor the author shall be liable for any loss of profit or any other commercial damages, including but not limited to special, incidental, consequential, personal, or other damages.</p>
+<p>First edition 2024</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="content"><a class="header" href="#content">Content</a></h1>
+<h3 id="module-1-programming-with-python"><a class="header" href="#module-1-programming-with-python"><a href="./Module_1__Programming_with_Python/Content.html">Module 1: Programming with Python</a></a></h3>
+<ul>
+<li><a href="./Module_1__Programming_with_Python/Foundations_of_Python_Programming.html">Foundations of Python Programming</a></li>
+<li><a href="./Module_1__Programming_with_Python/Data_Structures_Loops_and_Control_Structures.html">Data Structures, Loops, and Control Structures</a></li>
+<li><a href="./Module_1__Programming_with_Python/Functional_Programming_in_Python.html">Functional Programming in Python</a></li>
+<li><a href="./Module_1__Programming_with_Python/Linear_Algebra_using_NumPy.html">Linear Algebra using NumPy</a></li>
+<li><a href="./Module_1__Programming_with_Python/Data_Pre-processing_using_Pandas.html">Data Pre-processing using Pandas</a></li>
+<li><a href="./Module_1__Programming_with_Python/Data_Visualisation_using_Matplotlib.html">Data Visualisation using Matplotlib</a></li>
+<li><a href="./Module_1__Programming_with_Python/Scikit-learn.html">Scikit-learn</a></li>
+</ul>
+<h3 id="module-2-mathematical-foundations"><a class="header" href="#module-2-mathematical-foundations"><a href="./Module_2__Mathematical_Foundations/Content.html">Module 2: Mathematical Foundations</a></a></h3>
+<ul>
+<li><a href="./Module_2__Mathematical_Foundations/Linear_Algebra.html">Linear Algebra</a></li>
+<li><a href="./Module_2__Mathematical_Foundations/Optimization.html">Optimization</a></li>
+<li><a href="./Module_2__Mathematical_Foundations/Probability_Theory.html">Probability Theory</a></li>
+</ul>
+<h3 id="module-3-machine-learning-and-neural-networks"><a class="header" href="#module-3-machine-learning-and-neural-networks"><a href="./Module_3__Machine_Learning_and_Neural_Networks/Content.html">Module 3: Machine Learning and Neural Networks</a></a></h3>
+<ul>
+<li><a href="./Module_3__Machine_Learning_and_Neural_Networks/Introduction_to_AI-ML-DL_&amp;_Data_Analysis.html">Introduction to AI-ML-DL &amp; Data Analysis</a></li>
+<li><a href="./Module_3__Machine_Learning_and_Neural_Networks/Linear_Regression_Model.html">Linear Regression Model</a></li>
+<li><a href="./Module_3__Machine_Learning_and_Neural_Networks/Introduction__Supervised_&amp;_Unsupervised_Learning_Classification_&amp;_Regression_Models.html">Introduction - Supervised &amp; Unsupervised Learning, Classification &amp; Regression Models</a></li>
+<li><a href="./Module_3__Machine_Learning_and_Neural_Networks/Bayesian_Decision_Theory__Bayesian_Classifier_Discriminant_Functions_Minimum_Error_Rate_Classification.html">Bayesian Decision Theory - Bayesian Classifier, Discriminant Functions, Minimum Error Rate Classification</a></li>
+<li><a href="./Module_3__Machine_Learning_and_Neural_Networks/Na%C3%AFve_Bayes_Theory_with_example.html">Naïve Bayes Theory with example</a></li>
+<li><a href="./Module_3__Machine_Learning_and_Neural_Networks/Logistic_Regression_Model.html">Logistic Regression Model</a></li>
+<li><a href="./Module_3__Machine_Learning_and_Neural_Networks/Parameter_Estimation-Maximum_Likelihood.html">Parameter Estimation-Maximum Likelihood</a></li>
+<li><a href="./Module_3__Machine_Learning_and_Neural_Networks/Principal_Component_Aanalysis.html">Principal Component Aanalysis</a></li>
+<li><a href="./Module_3__Machine_Learning_and_Neural_Networks/Non-parametric_Techniques__K-Nearest_Neighbors_&amp;_Density_Estimation.html">Non-parametric Techniques - K-Nearest Neighbors &amp; Density Estimation</a></li>
+<li><a href="./Module_3__Machine_Learning_and_Neural_Networks/Decision_Tree__Entropy_Gini_Impurity_Index.html">Decision Tree - Entropy, Gini Impurity Index</a></li>
+<li><a href="./Module_3__Machine_Learning_and_Neural_Networks/Neural_networks_components.html">Neural Networks Components</a></li>
+<li><a href="./Module_3__Machine_Learning_and_Neural_Networks/Radial_Basis_Functions_and_K-means_Clustering.html">Radial Basis Functions and K-means Clustering</a></li>
+<li><a href="./Module_3__Machine_Learning_and_Neural_Networks/Support_Vector_Machine_(SVM).html">Support Vector Machine (SVM)</a></li>
+<li><a href="./Module_3__Machine_Learning_and_Neural_Networks/Random_Forest_Ensemble_Learning_Bagging_Boosting.html">Random Forest, Ensemble Learning, Bagging, Boosting</a></li>
+</ul>
+<h3 id="module-4-deep-learning"><a class="header" href="#module-4-deep-learning"><a href="./Module_4__Deep_Learning/Content.html">Module 4: Deep Learning</a></a></h3>
+<ul>
+<li><a href="./Module_4__Deep_Learning/Basics_of_Deep_Learning.html">Basics of Deep Learning</a></li>
+<li><a href="./Module_4__Deep_Learning/Deep_Learning_Architectures.html">Deep Learning Architectures</a></li>
+<li><a href="./Module_4__Deep_Learning/Methodology_and_Applications.html">Methodology and Applications</a></li>
+<li><a href="./Module_4__Deep_Learning/Demonstration_of_Deep_Learning_Applications.html">Demonstration of Deep Learning Applications</a></li>
+</ul>
+<h3 id="module-5-applications-of-machine-learning"><a class="header" href="#module-5-applications-of-machine-learning"><a href="./Module_5__Applications_of_Machine_Learning/Content.html">Module 5: Applications of Machine Learning</a></a></h3>
+<ul>
+<li><a href="./Module_5__Applications_of_Machine_Learning/Computer_Vision.html">Computer Vision</a></li>
+<li><a href="./Module_5__Applications_of_Machine_Learning/Speech_Recognition.html">Speech Recognition</a></li>
+<li><a href="./Module_5__Applications_of_Machine_Learning/NLP.html">NLP</a></li>
+<li><a href="./Module_5__Applications_of_Machine_Learning/Advanced_topic__ChatGPT.html">Advanced topic - ChatGPT</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="module-1"><a class="header" href="#module-1">Module 1</a></h1>
+<h2 id="programming-with-python"><a class="header" href="#programming-with-python">Programming with Python</a></h2>
+<ul>
+<li><a href="Module_1__Programming_with_Python/./Foundations_of_Python_Programming.html">Foundations of Python Programming</a></li>
+<li><a href="Module_1__Programming_with_Python/./Data_Structures_Loops_and_Control_Structures.html">Data Structures, Loops, and Control Structures</a></li>
+<li><a href="Module_1__Programming_with_Python/./Functional_Programming_in_Python.html">Functional Programming in Python</a></li>
+<li><a href="Module_1__Programming_with_Python/./Linear_Algebra_using_NumPy.html">Linear Algebra using NumPy</a></li>
+<li><a href="Module_1__Programming_with_Python/./Data_Pre-processing_using_Pandas.html">Data Pre-processing using Pandas</a></li>
+<li><a href="Module_1__Programming_with_Python/./Data_Visualisation_using_Matplotlib.html">Data Visualisation using Matplotlib</a></li>
+<li><a href="Module_1__Programming_with_Python/./Scikit-learn.html">Scikit-learn</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="foundations-of-python-programming"><a class="header" href="#foundations-of-python-programming">Foundations of Python Programming</a></h1>
+<p>Python is a powerful and versatile programming language widely used for various applications, from web development and data science to automation and scripting. Here's a breakdown of the foundations of Python programming:</p>
+<p><strong>1. Installation:</strong></p>
+<p>Before diving in, you'll need Python installed on your computer. You can download it for free from the official website (<a href="https://www.python.org/downloads/">https://www.python.org/downloads/</a>). The installation process is usually straightforward.</p>
+<p><strong>2. Basic Syntax:</strong></p>
+<p>Python has a clear and concise syntax that makes it easy to read and write code. Here are some key elements:</p>
+<ul>
+<li><strong>Indentation:</strong> Unlike many languages, Python relies on indentation (usually 4 spaces) to define code blocks. This makes code visually clear and avoids the need for curly braces.</li>
+<li><strong>Variables:</strong> Variables store data like numbers, text, or booleans (True/False). You can assign values to variables using the <code>=</code> operator.</li>
+<li><strong>Data Types:</strong> Python supports various data types like integers (<code>int</code>), floats (<code>float</code>), strings (<code>str</code>), and booleans (<code>bool</code>).</li>
+<li><strong>Operators:</strong> Python provides arithmetic operators (+, -, *, /), comparison operators (==, !=, &lt;, &gt;), and logical operators (and, or, not).</li>
+<li><strong>Control Flow:</strong> Control flow statements like <code>if</code>, <code>else</code>, and <code>for</code> loops allow you to control the execution of code based on certain conditions or iterate over sequences of data.</li>
+<li><strong>Functions:</strong> Functions are reusable blocks of code that perform specific tasks. You can define functions with the <code>def</code> keyword and pass arguments to them.</li>
+</ul>
+<p><strong>3. Working with Input and Output:</strong></p>
+<p>Python provides functions for interacting with the user and manipulating data:</p>
+<ul>
+<li><code>input()</code>: This function prompts the user for input and stores it as a string.</li>
+<li><code>print()</code>: This function displays output on the console.</li>
+</ul>
+<p><strong>4. Libraries and Modules:</strong></p>
+<p>Python offers a rich ecosystem of libraries and modules that extend its functionality. These pre-written code packages provide functionalities for various tasks like data analysis (NumPy, Pandas), web development (Django, Flask), and machine learning (Scikit-learn, TensorFlow).</p>
+<p><strong>5. Comments:</strong></p>
+<p>Adding comments to your code explains its purpose and improves readability. Comments are ignored by the Python interpreter but are valuable for human understanding. Use the <code>#</code> symbol to add single-line comments.</p>
+<p><strong>Here's a simple Python example to illustrate these concepts:</strong></p>
+<pre><code class="language-python"># This program greets the user
+
+name = input("What is your name? ")  # Get user input
+
+print("Hello,", name + "!")  # Print a personalized greeting
+</code></pre>
+<p><strong>Learning Resources:</strong></p>
+<ul>
+<li><strong>Official Python Tutorial:</strong> <a href="https://docs.python.org/3/tutorial/">https://docs.python.org/3/tutorial/</a></li>
+<li><strong>Codecademy's Learn Python 3 course:</strong> <a href="https://www.codecademy.com/learn/learn-python-3">https://www.codecademy.com/learn/learn-python-3</a></li>
+<li><strong>Coursera's Python for Everybody Specialization:</strong> <a href="https://www.coursera.org/specializations/python">https://www.coursera.org/specializations/python</a></li>
+</ul>
+<p>By grasping these foundations and exploring resources, you'll be well on your way to becoming a proficient Python programmer!</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="data-structures-loops-and-control-structures"><a class="header" href="#data-structures-loops-and-control-structures">Data Structures, Loops, and Control Structures</a></h1>
+<p>Data structures, loops, and control structures are the fundamental building blocks of any programming language, and Python is no exception. Here's a breakdown of these essential concepts:</p>
+<p><strong>Data Structures:</strong></p>
+<p>Data structures organize information in a specific way for efficient storage, retrieval, and manipulation. Here are some common data structures in Python:</p>
+<ul>
+<li><strong>Lists:</strong> Ordered, mutable collections of items enclosed in square brackets <code>[]</code>. You can store various data types within a list and access elements using their index (position).
+<pre><code class="language-python">fruits = ["apple", "banana", "cherry"]
+print(fruits[1])  # Output: banana
+</code></pre>
+</li>
+<li><strong>Tuples:</strong> Similar to lists but immutable (cannot be changed after creation). Tuples use parentheses <code>()</code>.
+<pre><code class="language-python">coordinates = (10, 20)
+</code></pre>
+</li>
+<li><strong>Dictionaries:</strong> Unordered collections of key-value pairs enclosed in curly braces <code>{}</code>. Keys must be unique and immutable (often strings or numbers), while values can be any data type.
+<pre><code class="language-python">person = {"name": "Alice", "age": 30}
+print(person["name"])  # Output: Alice
+</code></pre>
+</li>
+<li><strong>Sets:</strong> Unordered collections of unique elements. Sets use curly braces <code>{}</code> but without duplicates.
+<pre><code class="language-python">unique_numbers = {1, 2, 2, 3}  # Set will only contain {1, 2, 3}
+</code></pre>
+</li>
+</ul>
+<p><strong>Loops:</strong></p>
+<p>Loops allow you to execute a block of code repeatedly until a specific condition is met. Here are some common loop types:</p>
+<ul>
+<li><strong>For loop:</strong> Iterates over a sequence of elements (like a list or string).
+<pre><code class="language-python">for fruit in fruits:
+    print(fruit)
+</code></pre>
+</li>
+<li><strong>While loop:</strong> Continues executing a block of code as long as a condition is True.
+<pre><code class="language-python">count = 0
+while count &lt; 5:
+    print(count)
+    count += 1  # Increment count by 1
+</code></pre>
+</li>
+</ul>
+<p><strong>Control Structures:</strong></p>
+<p>Control structures dictate the flow of execution within your program. Common examples include:</p>
+<ul>
+<li><strong>If statements:</strong> Execute a code block only if a certain condition is True.
+<pre><code class="language-python">age = 18
+if age &gt;= 18:
+    print("You are eligible to vote.")
+</code></pre>
+</li>
+<li><strong>Else statements:</strong> Provide an alternative code block if the <code>if</code> condition is False.
+<pre><code class="language-python">age = 15
+if age &gt;= 18:
+    print("You are eligible to vote.")
+else:
+    print("You are not eligible to vote yet.")
+</code></pre>
+</li>
+<li><strong>Elif statements:</strong> Allow for checking multiple conditions within an <code>if</code> statement.
+<pre><code class="language-python">grade = "A"
+if grade == "A":
+    print("Excellent!")
+elif grade == "B":
+    print("Good job!")
+else:
+    print("Keep studying!")
+</code></pre>
+</li>
+</ul>
+<p>These basic data structures, loops, and control structures allow you to write powerful and versatile Python programs. As you progress, you'll encounter more complex data structures and advanced control flow techniques.</p>
+<p><strong>Learning Resources:</strong></p>
+<ul>
+<li><strong>Official Python Tutorial - Data Structures:</strong> <a href="https://docs.python.org/">https://docs.python.org/</a></li>
+<li><strong>Official Python Tutorial - Loops:</strong> <a href="https://docs.python.org/3/tutorial/controlflow.html">https://docs.python.org/3/tutorial/controlflow.html</a></li>
+<li><strong>W3Schools Python Loops:</strong> <a href="https://www.w3schools.com/python/python_while_loops.asp">https://www.w3schools.com/python/python_while_loops.asp</a></li>
+<li><strong>W3Schools Python Control Flow:</strong> <a href="https://www.w3schools.com/python/python_conditions.asp">https://www.w3schools.com/python/python_conditions.asp</a></li>
+</ul>
+<p>By practicing with these concepts and building small programs, you'll gain a solid grasp of Python's programming fundamentals.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="functional-programming-in-python"><a class="header" href="#functional-programming-in-python">Functional Programming in Python</a></h1>
+<p>Here's a comprehensive explanation of functional programming in Python:</p>
+<p><strong>Functional Programming Paradigm:</strong></p>
+<p>Functional programming emphasizes using functions as the primary building blocks of programs. It focuses on:</p>
+<ul>
+<li><strong>Immutable Data:</strong> Data shouldn't be modified after creation. This promotes purity and simplifies reasoning about program behavior.</li>
+<li><strong>Pure Functions:</strong> Functions should only depend on their inputs and always produce the same output for a given input. They shouldn't have side effects (altering global variables or external state).</li>
+<li><strong>First-Class Functions:</strong> Functions can be treated like any other data type: assigned to variables, passed as arguments to other functions, and returned from functions.</li>
+</ul>
+<p><strong>Functional Programming in Python:</strong></p>
+<p>While Python is primarily an object-oriented language, it supports functional programming concepts to some extent. Here are key elements:</p>
+<ul>
+<li><strong>Built-in Functions:</strong> Python provides numerous built-in functions like <code>map</code>, <code>filter</code>, <code>reduce</code>, and <code>lambda</code> that encourage functional style.</li>
+<li><strong>List Comprehensions:</strong> A concise way to create lists based on existing iterables, promoting code readability and potentially improving performance.</li>
+<li><strong>Higher-Order Functions:</strong> Functions that operate on other functions. They allow you to create more generic and reusable code.</li>
+</ul>
+<p><strong>Example: Functional vs. Imperative Approaches</strong></p>
+<p>Let's consider a simple task of squaring all numbers in a list:</p>
+<p><strong>Imperative Approach (modifying the original list):</strong></p>
+<pre><code class="language-python">def square_imperative(numbers):
+  for i in range(len(numbers)):
+    numbers[i] = numbers[i] * numbers[i]
+  return numbers
+
+numbers = [1, 2, 3, 4]
+squared_numbers = square_imperative(numbers)
+print(squared_numbers)  # Output: [1, 4, 9, 16]
+
+# Original list got modified
+print(numbers)  # Output: [1, 4, 9, 16]
+</code></pre>
+<p><strong>Functional Approach (creating a new list):</strong></p>
+<pre><code class="language-python">def square_functional(numbers):
+  return [number * number for number in numbers]
+
+numbers = [1, 2, 3, 4]
+squared_numbers = square_functional(numbers)
+print(squared_numbers)  # Output: [1, 4, 9, 16]
+
+# Original list remains unchanged
+print(numbers)  # Output: [1, 2, 3, 4]
+</code></pre>
+<p>The functional approach creates a new list with the squares, leaving the original <code>numbers</code> list intact. This promotes immutability and simplifies reasoning about the function's behavior.</p>
+<p><strong>Benefits of Functional Programming:</strong></p>
+<ul>
+<li><strong>Immutability:</strong> Makes code easier to reason about, reduces bugs caused by unintended modifications.</li>
+<li><strong>Declarative Style:</strong> Code focuses on "what" to compute rather than "how," improving readability.</li>
+<li><strong>Parallelization:</strong> Functional code is often easier to parallelize, potentially improving performance.</li>
+<li><strong>Easier Testing:</strong> Pure functions with well-defined inputs and outputs are easier to test and reason about.</li>
+</ul>
+<p><strong>Limitations of Functional Programming in Python:</strong></p>
+<ul>
+<li><strong>Performance:</strong> In some cases, imperative approaches might be more efficient, especially for simple operations.</li>
+<li><strong>Object-Oriented Design:</strong> Python's object-oriented features are sometimes more natural for certain problems.</li>
+</ul>
+<p><strong>When to Use Functional Programming in Python:</strong></p>
+<ul>
+<li><strong>Data processing tasks:</strong> Filtering, transforming, and manipulating data.</li>
+<li><strong>Algorithmic problems:</strong> Well-suited for problems that can be broken down into smaller, pure functions.</li>
+<li><strong>Improving code readability and maintainability:</strong> Especially for complex logic.</li>
+</ul>
+<p>Remember, functional programming is a powerful tool to enhance your Python programming skills. It's not a replacement for object-oriented programming, but rather a complementary approach to consider for specific situations.</p>
+<p><strong>Additional Resources:</strong></p>
+<ul>
+<li><strong>Real Python - Functional Programming Python:</strong> <a href="https://realpython.com/learning-paths/functional-programming/">https://realpython.com/learning-paths/functional-programming/</a></li>
+<li><strong>GeeksforGeeks - Functional Programming in Python:</strong> <a href="https://www.geeksforgeeks.org/functional-programming-in-python/">https://www.geeksforgeeks.org/functional-programming-in-python/</a></li>
+<li><strong>Python Documentation - Functional Programming HOWTO:</strong> <a href="https://docs.python.org/3/howto/functional.html">https://docs.python.org/3/howto/functional.html</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="linear-algebra-using-numpy"><a class="header" href="#linear-algebra-using-numpy">Linear Algebra using NumPy</a></h1>
+<p>NumPy (Numerical Python) is a powerful library in Python that provides efficient tools for working with multidimensional arrays and linear algebra operations. Here's a breakdown of using NumPy for linear algebra:</p>
+<p><strong>1. Creating and Working with NumPy Arrays:</strong></p>
+<ul>
+<li>Import NumPy:
+<pre><code class="language-python">import numpy as np 
+</code></pre>
+</li>
+<li>Create arrays:
+<ul>
+<li>From lists:
+<pre><code class="language-python">arr = np.array([1, 2, 3])
+</code></pre>
+</li>
+<li>Using functions:
+<pre><code class="language-python">zeros = np.zeros((2, 3))  # Creates a 2x3 array of zeros
+</code></pre>
+</li>
+</ul>
+</li>
+<li>Access elements:
+<pre><code class="language-python">element = arr[0]  # Access the first element
+</code></pre>
+</li>
+<li>Slicing: Similar to Python lists for extracting sub-arrays.</li>
+</ul>
+<p><strong>2. Linear Algebra Operations:</strong></p>
+<p>NumPy's <code>linalg</code> submodule offers a plethora of functions for linear algebra tasks:</p>
+<ul>
+<li><strong>Matrix Multiplication:</strong>
+<pre><code class="language-python">A = np.array([[1, 2], [3, 4]])
+B = np.array([[5, 6], [7, 8]])
+C = np.dot(A, B)  # Output: [[19, 22], [43, 50]]
+</code></pre>
+</li>
+<li><strong>Matrix Transpose:</strong>
+<pre><code class="language-python">transposed = A.T  # Output: [[1, 3], [2, 4]]
+</code></pre>
+</li>
+<li><strong>Matrix Determinant:</strong>
+<pre><code class="language-python">det = np.linalg.det(A)  # Output: -2.0000000000000004 
+</code></pre>
+</li>
+<li><strong>Solving Linear Systems:</strong>
+<pre><code class="language-python">x = np.linalg.solve(A, b)  # Solves Ax = b for x, where b is a vector
+</code></pre>
+</li>
+<li><strong>Eigenvalues and Eigenvectors:</strong>
+<pre><code class="language-python">eigenvalues, eigenvectors = np.linalg.eig(A)
+# Output: 
+#  eigenvalues = [-0.37228132  5.37228132] 
+#  eigenvectors = [[-0.82456484 -0.41597356] [ 0.56576746 -0.90937671]]
+</code></pre>
+</li>
+<li><strong>Inverse of a Matrix:</strong>
+<pre><code class="language-python">inverse = np.linalg.inv(A)  # Output: [[-2. ,  1. ], [ 1.5, -0.5]]
+</code></pre>
+</li>
+</ul>
+<p><strong>3. Additional Features:</strong></p>
+<ul>
+<li><strong>Broadcasting:</strong> Efficiently perform element-wise operations between arrays of compatible shapes.</li>
+<li><strong>Linear Algebra Functions:</strong> NumPy offers functions like <code>linalg.norm</code> (calculating vector norms), <code>linalg.qr</code> (QR decomposition), and more for advanced operations.</li>
+</ul>
+<p><strong>Benefits of Using NumPy for Linear Algebra:</strong></p>
+<ul>
+<li><strong>Performance:</strong> NumPy leverages optimized C code for efficient numerical computations.</li>
+<li><strong>Ease of Use:</strong> Provides a user-friendly interface for linear algebra operations.</li>
+<li><strong>Integration with SciPy:</strong> NumPy integrates seamlessly with SciPy, offering a broader scientific computing ecosystem.</li>
+</ul>
+<p><strong>Example: Solving a Linear System of Equations</strong></p>
+<pre><code class="language-python">import numpy as np
+
+# Define matrix A and vector b
+A = np.array([[2, 1], [1, 3]])
+b = np.array([5, 4])
+
+# Solve Ax = b for x
+x = np.linalg.solve(A, b)
+
+# Print the solution vector x
+print(x)
+</code></pre>
+<p>This code solves the system of equations 2x + y = 5 and x + 3y = 4, and prints the solution vector <code>[2.2, 0.6]</code>.</p>
+<p>By leveraging NumPy's linear algebra capabilities, you can perform various mathematical computations efficiently in your Python programs.</p>
+<p><strong>Learning Resources:</strong></p>
+<ul>
+<li><strong>NumPy Documentation - Linear Algebra:</strong> <a href="https://numpy.org/doc/stable/reference/routines.linalg.html">https://numpy.org/doc/stable/reference/routines.linalg.html</a></li>
+<li><strong>SciPy Lecture Notes - Linear Algebra:</strong> <a href="http://scipy-lectures.org/intro/numpy/index.html">http://scipy-lectures.org/intro/numpy/index.html</a></li>
+<li><strong>Sentdex - NumPy Linear Algebra Tutorial:</strong> <a href="https://m.youtube.com/watch?v=X5BX0B-YAC0">https://m.youtube.com/watch?v=X5BX0B-YAC0</a></li>
+</ul>
+<p>I hope this comprehensive explanation empowers you to explore the world of linear algebra using NumPy!</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="data-pre-processing-using-pandas"><a class="header" href="#data-pre-processing-using-pandas">Data Pre-processing using Pandas</a></h1>
+<p>Pandas is a powerful library in Python specifically designed for data manipulation and analysis. It excels at data pre-processing tasks, making raw data ready for further exploration and modeling. Here's a breakdown of key pre-processing techniques in Pandas:</p>
+<p><strong>1. Loading Data:</strong></p>
+<ul>
+<li><strong>CSV Files:</strong> <code>df = pd.read_csv('your_data.csv')</code></li>
+<li><strong>Excel Files:</strong> <code>df = pd.read_excel('your_data.xlsx')</code></li>
+<li><strong>Other Formats:</strong> Pandas supports various data formats like JSON, Parquet, and more.</li>
+</ul>
+<p><strong>2. Exploring Data:</strong></p>
+<ul>
+<li><strong>Data Structure:</strong> <code>df.head()</code> shows the first few rows, <code>df.tail()</code> shows the last few.</li>
+<li><strong>Data Types:</strong> <code>df.dtypes</code> displays data types of each column.</li>
+<li><strong>Summary Statistics:</strong> <code>df.describe()</code> provides summary statistics for numerical columns.</li>
+</ul>
+<p><strong>3. Handling Missing Values:</strong></p>
+<ul>
+<li><strong>Identifying Missing Values:</strong> <code>df.isnull().sum()</code> shows the number of missing values per column.</li>
+<li><strong>Dropping Rows/Columns:</strong> <code>df.dropna()</code> drops rows/columns with missing values (optional parameters for customization).</li>
+<li><strong>Filling Missing Values:</strong> <code>df.fillna()</code> replaces missing values with a specific value (e.g., mean, median).</li>
+</ul>
+<p><strong>4. Data Cleaning:</strong></p>
+<ul>
+<li><strong>Removing Duplicates:</strong> <code>df.drop_duplicates()</code> removes duplicate rows (optional parameters for specifying columns).</li>
+<li><strong>Correcting Inconsistent Formatting:</strong> Use string manipulation techniques (<code>.str</code>) to clean text data, address capitalization issues, etc.</li>
+</ul>
+<p><strong>5. Data Transformation:</strong></p>
+<ul>
+<li><strong>Creating New Columns:</strong> Perform calculations or data transformations to create new features.</li>
+<li><strong>Encoding Categorical Variables:</strong> Convert categorical data into numerical representations suitable for machine learning models (e.g., one-hot encoding, label encoding).</li>
+<li><strong>Normalization/Standardization:</strong> Scale numerical features to a common range for improved model performance (e.g., Min-Max scaling, StandardScaler).</li>
+</ul>
+<p><strong>6. Data Splitting:</strong></p>
+<ul>
+<li><strong>Train-Test Split:</strong> Split your data into training and testing sets for model evaluation. Use <code>train_test_split</code> from scikit-learn to achieve this.</li>
+</ul>
+<p><strong>Example: Pre-processing a Simple Dataset</strong></p>
+<pre><code class="language-python">import pandas as pd
+
+# Load data from CSV
+df = pd.read_csv('data.csv')
+
+# Check for missing values
+print(df.isnull().sum())
+
+# Fill missing values in 'age' column with the mean age
+df['age'].fillna(df['age'].mean(), inplace=True)
+
+# Create a new column 'age_group' based on age ranges
+df['age_group'] = pd.cut(df['age'], bins=[18, 25, 35, 65], labels=['Young Adult', 'Adult', 'Middle-aged'])
+
+# Encode categorical variable 'country' using one-hot encoding
+df = pd.get_dummies(df, columns=['country'])
+
+# Split data into training and testing sets (70% training, 30% testing)
+from sklearn.model_selection import train_test_split
+
+X_train, X_test, y_train, y_test = train_test_split(df.drop('target', axis=1), df['target'], test_size=0.3, random_state=42)
+</code></pre>
+<p><strong>Remember:</strong> Data pre-processing is crucial for ensuring the quality and effectiveness of your machine learning models. Pandas provides a versatile toolkit for cleaning, transforming, and preparing your data for analysis.</p>
+<p><strong>Learning Resources:</strong></p>
+<ul>
+<li><strong>Pandas Documentation - Data Cleaning and Preparation:</strong> <a href="https://pandas.pydata.org/docs/user_guide/missing_data.html">https://pandas.pydata.org/docs/user_guide/missing_data.html</a></li>
+<li><strong>Kaggle Learn - Pandas Tutorial:</strong> [invalid URL removed]</li>
+<li><strong>DataCamp Tutorial - Data Cleaning in Pandas:</strong> [invalid URL removed]</li>
+</ul>
+<p>By mastering these data pre-processing techniques with Pandas, you'll be well on your way to building robust and successful machine learning models.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="data-visualisation-using-matplotlib"><a class="header" href="#data-visualisation-using-matplotlib">Data Visualisation using Matplotlib</a></h1>
+<p>Matplotlib is a fundamental library in Python for creating various static, animated, and interactive visualizations. Here's a breakdown of using Matplotlib for data visualization:</p>
+<p><strong>1. Basic Plotting:</strong></p>
+<ul>
+<li>Import Matplotlib: <code>import matplotlib.pyplot as plt</code></li>
+<li>Create plots:
+<ul>
+<li>Line plots: <code>plt.plot(x, y)</code> to visualize trends between numerical data points.</li>
+<li>Scatter plots: <code>plt.scatter(x, y)</code> to explore relationships between two variables.</li>
+<li>Bar plots: <code>plt.bar(x, height)</code> to represent categorical data or compare values across categories.</li>
+<li>Histograms: <code>plt.hist(data)</code> to visualize the distribution of numerical data.</li>
+</ul>
+</li>
+<li>Customize plots: Add labels (<code>plt.xlabel()</code>, <code>plt.ylabel()</code>), titles (<code>plt.title()</code>), legends (<code>plt.legend()</code>), and adjust axes (<code>plt.xlim()</code>, <code>plt.ylim()</code>).</li>
+</ul>
+<p><strong>2. Subplots and Layouts:</strong></p>
+<ul>
+<li>Create multiple plots on a single figure: <code>plt.subplots(nrows=rows, ncols=cols)</code></li>
+<li>Arrange subplots using techniques like <code>plt.subplot(row, col, index)</code>.</li>
+</ul>
+<p><strong>3. Customization and Styling:</strong></p>
+<ul>
+<li>Line styles, markers, and colors: Control the appearance of lines, data points, and bars using arguments in plotting functions (e.g., <code>linestyle='--'</code>, <code>marker='o'</code>, <code>color='red'</code>).</li>
+<li>Text elements: Add annotations (<code>plt.text()</code>) and customize fonts (<code>plt.xlabel(...,fontsize=12)</code>)</li>
+<li>Grids and legends: Control grid lines (<code>plt.grid(True)</code>) and legends (<code>plt.legend()</code>).</li>
+</ul>
+<p><strong>4. Saving Plots:</strong></p>
+<ul>
+<li>Save visualizations as images: <code>plt.savefig('my_plot.png')</code> for various image formats (PNG, JPG, etc.).</li>
+</ul>
+<p><strong>Example: Creating a Line Plot</strong></p>
+<pre><code class="language-python">import matplotlib.pyplot as plt
+
+# Sample data
+x = [1, 2, 3, 4, 5]
+y = [2, 4, 1, 5, 3]
+
+# Create a line plot
+plt.plot(x, y)
+
+# Add labels and title
+plt.xlabel('X-axis')
+plt.ylabel('Y-axis')
+plt.title('Line Plot Example')
+
+# Display the plot
+plt.show()
+</code></pre>
+<p>This code creates a line plot with labels and a title, then displays it on the screen.</p>
+<p><strong>Additional Considerations:</strong></p>
+<ul>
+<li><strong>Customization:</strong> Matplotlib offers extensive options for customizing every aspect of your plots. Explore the documentation and tutorials for in-depth control.</li>
+<li><strong>Integration with Other Libraries:</strong> Matplotlib works well with other scientific Python libraries like NumPy and Pandas for data analysis and visualization.</li>
+<li><strong>Interactive Visualization:</strong> For interactive plots, consider libraries like Plotly or Bokeh.</li>
+</ul>
+<p><strong>Learning Resources:</strong></p>
+<ul>
+<li><strong>Matplotlib Tutorial:</strong> <a href="https://matplotlib.org/stable/tutorials/index.html">https://matplotlib.org/stable/tutorials/index.html</a></li>
+<li><strong>Seaborn (built on Matplotlib):</strong> <a href="https://seaborn.pydata.org/">https://seaborn.pydata.org/</a></li>
+<li><strong>Interactive Visualization with Bokeh:</strong> <a href="http://bokeh.org/">http://bokeh.org/</a></li>
+</ul>
+<p>By mastering Matplotlib's fundamentals and exploring its customization options, you can create informative and visually appealing data visualizations to enhance your data analysis and communication.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="scikit-learn"><a class="header" href="#scikit-learn">Scikit-learn</a></h1>
+<p>Scikit-learn (often abbreviated sklearn) is a powerful and user-friendly machine learning library in Python. It provides a comprehensive set of tools and algorithms for various machine learning tasks, including:</p>
+<p><strong>Classification:</strong> Classifying data points into predefined categories. Common algorithms include:</p>
+<ul>
+<li>Support Vector Machines (SVMs)</li>
+<li>Random Forests</li>
+<li>Decision Trees</li>
+<li>K-Nearest Neighbors (KNN)</li>
+<li>Logistic Regression</li>
+</ul>
+<p><strong>Regression:</strong> Predicting continuous target values based on input features. Common algorithms include:</p>
+<ul>
+<li>Linear Regression</li>
+<li>Ridge Regression</li>
+<li>Lasso Regression</li>
+<li>Decision Tree Regression</li>
+</ul>
+<p><strong>Clustering:</strong> Grouping similar data points together. Common algorithms include:</p>
+<ul>
+<li>K-Means Clustering</li>
+<li>Hierarchical Clustering</li>
+<li>DBSCAN</li>
+</ul>
+<p><strong>Dimensionality Reduction:</strong> Reducing the number of features while preserving essential information. Common techniques include:</p>
+<ul>
+<li>Principal Component Analysis (PCA)</li>
+<li>Linear Discriminant Analysis (LDA)</li>
+</ul>
+<p><strong>Model Selection and Evaluation:</strong></p>
+<ul>
+<li>Tools for splitting data into training and testing sets for model evaluation.</li>
+<li>Metrics like accuracy, precision, recall, F1-score for classification, and mean squared error (MSE) for regression.</li>
+<li>GridSearchCV and RandomizedSearchCV for hyperparameter tuning (finding the optimal settings for a model).</li>
+</ul>
+<p><strong>Benefits of Using Scikit-learn:</strong></p>
+<ul>
+<li><strong>Ease of Use:</strong> Provides a user-friendly interface with well-documented functions and classes.</li>
+<li><strong>Variety of Algorithms:</strong> Supports a wide range of machine learning algorithms for different tasks.</li>
+<li><strong>Scalability:</strong> Efficiently handles large datasets.</li>
+<li><strong>Integration with Other Libraries:</strong> Works seamlessly with NumPy, Pandas, and Matplotlib for data manipulation and visualization.</li>
+</ul>
+<p><strong>Example: Building a Classification Model</strong></p>
+<pre><code class="language-python">from sklearn.datasets import load_iris  # Load a sample dataset
+from sklearn.model_selection import train_test_split
+from sklearn.svm import SVC  # Support Vector Machine classifier
+
+# Load the Iris dataset
+iris = load_iris()
+
+# Split data into features (X) and target variable (y)
+X = iris.data
+y = iris.target
+
+# Split data into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+
+# Create a Support Vector Machine classifier
+clf = SVC(kernel='linear')
+
+# Train the model on the training data
+clf.fit(X_train, y_train)
+
+# Make predictions on the testing set
+y_pred = clf.predict(X_test)
+
+# Evaluate the model performance (e.g., accuracy score)
+from sklearn.metrics import accuracy_score
+
+accuracy = accuracy_score(y_test, y_pred)
+print("Accuracy:", accuracy)
+</code></pre>
+<p><strong>Learning Resources:</strong></p>
+<ul>
+<li><strong>Scikit-learn Documentation:</strong> <a href="https://scikit-learn.org/">https://scikit-learn.org/</a></li>
+<li><strong>Machine Learning Crash Course with Scikit-learn:</strong> [invalid URL removed]</li>
+<li><strong>Hands-On Machine Learning with Scikit-Learn, Keras &amp; TensorFlow:</strong> [invalid URL removed]</li>
+</ul>
+<p>By understanding Scikit-learn's capabilities and exploring its algorithms, you can efficiently build and evaluate machine learning models for various data science tasks.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="module-2"><a class="header" href="#module-2">Module 2</a></h1>
+<h2 id="mathematical-foundations"><a class="header" href="#mathematical-foundations">Mathematical Foundations</a></h2>
+<ul>
+<li><a href="Module_2__Mathematical_Foundations/./Linear_Algebra.html">Linear Algebra</a></li>
+<li><a href="Module_2__Mathematical_Foundations/./Optimization.html">Optimization</a></li>
+<li><a href="Module_2__Mathematical_Foundations/./Probability_Theory.html">Probability Theory</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="linear-algebra"><a class="header" href="#linear-algebra">Linear Algebra</a></h1>
+<h2 id="vectors-matrices-norms-subspaces-projections-svd-evd-derivatives-of-matrices-vector-derivative-identities-least-squares"><a class="header" href="#vectors-matrices-norms-subspaces-projections-svd-evd-derivatives-of-matrices-vector-derivative-identities-least-squares">Vectors, Matrices, Norms, Subspaces, Projections, SVD, EVD, Derivatives of matrices, Vector Derivative Identities, Least Squares</a></h2>
+<p>Here's a breakdown of key linear algebra concepts for your Machine Learning exam preparation:</p>
+<p><strong>1. Vectors:</strong></p>
+<ul>
+<li><strong>Concept:</strong> Ordered collections of numbers representing quantities with magnitude and direction. Used extensively to represent data points, model parameters, and features in ML.</li>
+<li><strong>Operations:</strong> Addition, subtraction, scalar multiplication, dot product (inner product), and cross product (outer product).</li>
+<li><strong>Tips:</strong>
+<ul>
+<li>Understand the geometric interpretation of vectors, especially dot product, which measures projection and similarity.</li>
+<li>Practice vector manipulations and calculations relevant to ML (e.g., feature representation, distance metrics).</li>
+</ul>
+</li>
+</ul>
+<p><strong>2. Matrices:</strong></p>
+<ul>
+<li><strong>Concept:</strong> Rectangular arrays of numbers used to store and manipulate large datasets, linear transformations, and relationships between variables.</li>
+<li><strong>Operations:</strong> Addition, subtraction, scalar multiplication, matrix multiplication, transpose, determinant (invertible matrices).</li>
+<li><strong>Tips:</strong>
+<ul>
+<li>Grasp the concept of matrix multiplication as a transformation applied to vectors.</li>
+<li>Be familiar with special matrix types (e.g., identity matrix, diagonal matrix) and their properties.</li>
+<li>Practice matrix operations for common ML tasks (e.g., linear regression, matrix factorization).</li>
+</ul>
+</li>
+</ul>
+<p><strong>3. Norms:</strong></p>
+<ul>
+<li><strong>Concept:</strong> Measure the "length" or magnitude of a vector. Common norms include L1 norm (Manhattan distance), L2 norm (Euclidean distance), and infinity norm.</li>
+<li><strong>Formulae:</strong>
+<ul>
+<li>L1 norm: \( ||x||_1 = Σ |x_i| \)</li>
+<li>L2 norm: \( ||x||_2 = sqrt(Σ x_i^2) \)</li>
+<li>Infinity norm: \( ||x||_∞ = max(|x_i|) \)</li>
+</ul>
+</li>
+<li><strong>Tips:</strong>
+<ul>
+<li>Understand how different norms impact optimization algorithms in ML (e.g., L1 norm promotes sparsity, L2 norm helps with regularization).</li>
+<li>Use norms to measure distances between data points or errors in ML models.</li>
+</ul>
+</li>
+</ul>
+<p><strong>4. Subspaces:</strong></p>
+<ul>
+<li><strong>Concept:</strong> Collections of vectors within a vector space that satisfy certain closure properties (closed under addition and scalar multiplication).</li>
+<li><strong>Examples:</strong> Column space, row space, null space of a matrix.</li>
+<li><strong>Tips:</strong>
+<ul>
+<li>Subspaces represent specific sets of possible data points or model outputs.</li>
+<li>Analyze subspaces to understand the capabilities and limitations of linear models in ML.</li>
+</ul>
+</li>
+</ul>
+<p><strong>5. Projections:</strong></p>
+<ul>
+<li><strong>Concept:</strong> The orthogonal projection of a vector onto a subspace is the vector in the subspace closest to the original vector.</li>
+<li><strong>Formula (Projection of x onto subspace S):</strong>
+$$proj_S(x) = (x^T * S * S^T) * x$$</li>
+<li><strong>Tips:</strong>
+<ul>
+<li>Projections are used in dimensionality reduction techniques like Principal Component Analysis (PCA).</li>
+<li>Understand how projections affect data points and their interpretations in the context of ML algorithms.</li>
+</ul>
+</li>
+</ul>
+<p><strong>6. Singular Value Decomposition (SVD):</strong></p>
+<ul>
+<li><strong>Concept:</strong> Decomposes a matrix into three matrices: \(U\) (left singular vectors), \(Σ\) (singular values), and \(V^T\) (right singular vectors).</li>
+<li><strong>Formula:</strong>
+$$A = U * Σ * V^T$$</li>
+<li><strong>Tips:</strong>
+<ul>
+<li>SVD helps reveal the underlying structure of data, enabling dimensionality reduction and matrix factorization techniques.</li>
+<li>Use SVD for recommender systems, anomaly detection, and information retrieval in ML.</li>
+</ul>
+</li>
+</ul>
+<p><strong>7. Eigenvalue Decomposition (EVD):</strong></p>
+<ul>
+<li><strong>Concept:</strong> Decomposes a square matrix into its eigenvalues (scalars) and eigenvectors (non-zero vectors). Eigenvalues tell us how much a transformation scales a vector, and eigenvectors represent the directions along which the transformation scales.</li>
+<li><strong>Formula:</strong>
+$$A * v = λ * v$$
+where A is the matrix, v is the eigenvector, and λ is the eigenvalue.</li>
+<li><strong>Tips:</strong>
+<ul>
+<li>EVD helps analyze linear transformations and identify directions of maximum variance in data, useful for PCA and feature selection in ML.</li>
+<li>Understand the relationship between eigenvalues and eigenvectors, as they reveal important properties of the matrix.</li>
+</ul>
+</li>
+</ul>
+<p><strong>8. Derivatives of Matrices:</strong></p>
+<ul>
+<li><strong>Concept:</strong> Calculate the rate of change of a matrix-valued function with respect to a scalar variable.</li>
+<li><strong>Formulae:</strong> (Specific formulae depend on the function)</li>
+<li><strong>Tips:</strong>
+<ul>
+<li>Derivatives of matrices are crucial for back-propagation in training neural networks, where gradients guide parameter updates.</li>
+<li>Master differentiation rules for matrix operations to perform gradient calculations effectively.</li>
+</ul>
+</li>
+</ul>
+<p><strong>9. Vector Derivative Identities:</strong></p>
+<ul>
+<li><strong>Concept:</strong> Special identities that hold true when differentiating vector-valued functions with respect to a scalar variable.</li>
+<li><strong>Examples:</strong> Chain rule, product rule, summation rule.</li>
+<li><strong>Importance:</strong> Simplify calculations in back-propagation and other gradient-based optimization methods in ML.</li>
+</ul>
+<p><strong>10. Least Squares:</strong></p>
+<ul>
+<li><strong>Concept:</strong> Method for finding the best-fitting line or curve (linear regression) to minimize the sum of squared errors between the data points and the predicted values.</li>
+<li><strong>Formula:</strong>
+$$argmin_w ||A w - b||^2$$
+where:
+<ul>
+<li>A is the design matrix</li>
+<li>w is the weight vector</li>
+<li>b is the bias vector</li>
+</ul>
+</li>
+<li><strong>Importance:</strong> Foundational concept for linear regression, used in various ML models for finding optimal parameters.</li>
+</ul>
+<p>By understanding these core linear algebra concepts and their applications in ML, you'll be well-positioned to tackle problems involving vector operations, matrix manipulations, and optimization techniques in your exams. Remember to practice applying these concepts to sample problems and deepen your understanding.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="optimization"><a class="header" href="#optimization">Optimization</a></h1>
+<h2 id="gradient-descent-second-derivative-test-constrained-optimization-kkt"><a class="header" href="#gradient-descent-second-derivative-test-constrained-optimization-kkt">Gradient Descent, Second Derivative Test, Constrained Optimization, KKT</a></h2>
+<p>I'll provide a comprehensive explanation of the key optimization concepts for your ML exam preparation, incorporating formulas and practical insights:</p>
+<p><strong>1. Gradient Descent (GD):</strong></p>
+<ul>
+<li><strong>Concept:</strong> An iterative algorithm that navigates a function's landscape to find its minimum (for minimization problems). It works by taking steps in the opposite direction of the function's steepest ascent (gradient), gradually getting closer to the minimum.</li>
+<li><strong>Formula:</strong><br />
+$$w_{new} = w_{old} - η * ∇L(w)$$
+where:
+<ul>
+<li>\(w_{new}\) is the updated parameter vector</li>
+<li>\(w_{old}\) is the current parameter vector</li>
+<li>\(η\) (eta) is the learning rate, controlling step size</li>
+<li>\(∇L(w)\) is the gradient of the loss function \(L\) with respect to \(w\)</li>
+</ul>
+</li>
+<li><strong>Tips:</strong>
+<ul>
+<li>Choose a suitable learning rate to avoid getting stuck in local minima or overshooting the minimum.</li>
+<li>Consider variants like Stochastic Gradient Descent (SGD) or Mini-batch Gradient Descent for faster convergence with large datasets.</li>
+</ul>
+</li>
+</ul>
+<p><strong>2. Second Derivative Test:</strong></p>
+<ul>
+<li><strong>Concept:</strong> Not directly used in gradient descent itself, but helpful for verifying if a critical point (where the gradient is zero) is a minimum, maximum, or inflection point.</li>
+<li><strong>Formula:</strong><br />
+$$f''(x)$$
+where \(f''(x)\) is the second derivative of the function \(f(x)\) evaluated at the critical point x.</li>
+<li><strong>Interpretation:</strong>
+<ul>
+<li>\(f''(x) &gt; 0\) indicates a minimum at \(x\).</li>
+<li>\(f''(x) &lt; 0\) indicates a maximum at \(x\).</li>
+<li>\(f''(x) = 0\) doesn't provide conclusive information; further analysis might be needed.</li>
+</ul>
+</li>
+<li><strong>Tips:</strong>
+<ul>
+<li>While not essential for gradient descent, the second derivative test can be useful for understanding the curvature of the loss function and aiding in algorithm selection or parameter tuning.</li>
+</ul>
+</li>
+</ul>
+<p><strong>3. Constrained Optimization:</strong></p>
+<ul>
+<li><strong>Concept:</strong> Optimization problems where there are restrictions (constraints) on the values the parameters can take. For example, a parameter might need to be positive, or the sum of all parameters might be constrained.</li>
+<li><strong>Methods:</strong>
+<ul>
+<li>Lagrange Multipliers: Introduces Lagrange multipliers to convert the constrained problem into an unconstrained one, allowing you to use GD or other optimization techniques.</li>
+<li>Penalty Methods: Add penalty terms to the loss function that penalize violations of the constraints, guiding the optimization process towards feasible solutions.</li>
+</ul>
+</li>
+<li><strong>Tips:</strong>
+<ul>
+<li>Choose an appropriate constraint handling method based on your problem and the available optimization algorithms.</li>
+<li>Ensure that the constraints are well-defined and lead to a meaningful solution in your ML context.</li>
+</ul>
+</li>
+</ul>
+<p><strong>4. Karush-Kuhn-Tucker (KKT) Conditions:</strong></p>
+<ul>
+<li><strong>Concept:</strong> Necessary and sufficient conditions for optimality in constrained optimization problems using Lagrange multipliers. They define the relationships between the Lagrange multipliers, the gradients of the objective and constraint functions, and the constraints themselves.</li>
+<li><strong>KKT Conditions:</strong>
+<ol>
+<li>Primal feasibility: The constraints must be satisfied at the solution.</li>
+<li>Dual feasibility: The Lagrange multipliers must be non-negative.</li>
+<li>Stationarity: The gradient of the Lagrangian (objective function + Lagrange multipliers * constraints) must be zero with respect to the primal and dual variables.</li>
+<li>Complementary slackness: Either a constraint is satisfied at equality, or its corresponding Lagrange multiplier is zero.</li>
+</ol>
+</li>
+<li><strong>Tips:</strong>
+<ul>
+<li>Understanding the KKT conditions can help you verify the optimality of solutions obtained from constrained optimization methods like Lagrange Multipliers.</li>
+<li>They provide a theoretical foundation for analyzing and interpreting constrained optimization problems in ML.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Additional Tips for Exam Preparation:</strong></p>
+<ul>
+<li>Practice applying these concepts by solving sample exam questions involving optimization in ML.</li>
+<li>Understand the role of optimization algorithms in loss function minimization for various ML models (e.g., linear regression, logistic regression, neural networks).</li>
+<li>Be familiar with the trade-offs between different optimization algorithms (e.g., convergence speed, complexity) and how they might affect ML model performance.</li>
+</ul>
+<p>By mastering these core optimization concepts and their practical applications, you'll be well-equipped to tackle relevant exam questions and effectively train ML models.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="probability-theory"><a class="header" href="#probability-theory">Probability Theory</a></h1>
+<h2 id="discrete-and-continuous-random-variables-conditional-probability-joint-probability-distribution-multivariate-map-criterion-ml-criterion"><a class="header" href="#discrete-and-continuous-random-variables-conditional-probability-joint-probability-distribution-multivariate-map-criterion-ml-criterion">Discrete and Continuous Random Variables, Conditional Probability, Joint Probability Distribution, Multivariate, MAP Criterion, ML Criterion</a></h2>
+<p>This concise guide covers key probability concepts relevant to ML exams, including formulas:</p>
+<p><strong>1. Random Variables (RVs):</strong></p>
+<ul>
+<li><strong>Concept:</strong> A variable whose value depends on chance (outcome of a random experiment).</li>
+</ul>
+<p><strong>Types:</strong></p>
+<ul>
+<li><strong>Discrete:</strong> Takes a finite or countable number of values (e.g., coin flips, dice rolls).</li>
+<li><strong>Continuous:</strong> Can take any value within a specific range (e.g., heights, weights).</li>
+</ul>
+<p><strong>2. Probability Distribution Function (PDF):</strong></p>
+<ul>
+<li><strong>Discrete:</strong>
+$$
+P(X = x) = f(x)
+$$
+where:
+<ul>
+<li>\(P(X = x)\) is the probability of RV X taking on value x</li>
+<li>\(f(x)\) is the probability mass function (PMF)</li>
+</ul>
+</li>
+<li><strong>Continuous:</strong>
+$$
+P(a ≤ X ≤ b) = ∫_a^b f(x) dx
+$$
+where:
+<ul>
+<li>\(P(a ≤ X ≤ b)\) is the probability of X falling within the range a to b</li>
+<li>\(f(x)\) is the probability density function (PDF)</li>
+</ul>
+</li>
+</ul>
+<p><strong>3. Conditional Probability:</strong></p>
+<ul>
+<li><strong>Concept:</strong> Probability of event B occurring given that event A has already happened.</li>
+<li><strong>Formula:</strong>
+$$
+P(B | A) = P(A ∩ B) / P(A)
+$$
+where:
+<ul>
+<li>\(P(B | A)\) is the conditional probability of B given A</li>
+<li>\(P(A ∩ B)\) is the joint probability of A and B happening together</li>
+<li>\(P(A)\) is the probability of event A occurring</li>
+</ul>
+</li>
+</ul>
+<p><strong>4. Joint Probability Distribution (JPD):</strong></p>
+<ul>
+<li><strong>Concept:</strong> Describes the probability of multiple RVs occurring simultaneously.</li>
+<li><strong>Discrete:</strong> A table or formula specifying the probability of each combination of values.</li>
+<li><strong>Continuous:</strong> A function that takes multiple values as arguments and outputs the joint probability.</li>
+</ul>
+<p><strong>5. Multivariate Distribution:</strong></p>
+<ul>
+<li><strong>Concept:</strong> A joint probability distribution for more than two RVs.</li>
+<li><strong>Example:</strong> Distribution of height and weight of individuals (two RVs).</li>
+</ul>
+<p><strong>6. Maximum A Posteriori (MAP) Criterion:</strong></p>
+<ul>
+<li><strong>Concept:</strong> A decision rule in ML that finds the most probable hypothesis (parameter values) given the observed data.</li>
+<li><strong>Formula:</strong>
+$$
+argmax_θ P(θ | X)
+$$
+where:
+<ul>
+<li>θ (theta) represents the hypothesis (parameter values)</li>
+<li>X represents the observed data</li>
+<li>\(P(θ | X)\) is the posterior probability of θ given X, using Bayes' theorem</li>
+</ul>
+</li>
+</ul>
+<p><strong>7. Maximum Likelihood (ML) Criterion:</strong></p>
+<ul>
+<li><strong>Concept:</strong> A method for estimating model parameters by finding the values that maximize the likelihood of observing the training data.</li>
+<li><strong>Formula:</strong>
+$$
+argmax_θ P(X | θ)
+$$
+where:
+<ul>
+<li>θ represents the model parameters</li>
+<li>X represents the observed data</li>
+<li>\(P(X | θ)\) is the likelihood of X given θ</li>
+</ul>
+</li>
+</ul>
+<p><strong>Remember:</strong></p>
+<ul>
+<li>These are foundational concepts. Exams may delve deeper into specific probability distributions and their applications in ML algorithms.</li>
+<li>Practice using these formulas and interpreting probabilities in the context of ML problems.</li>
+</ul>
+<hr />
+<h3 id="summary"><a class="header" href="#summary">Summary</a></h3>
+<p>Sure, here are some concise notes on the requested Machine Learning topics:</p>
+<p><strong>1. Discrete and Continuous Random Variables:</strong></p>
+<ul>
+<li>A random variable is a variable whose possible values are numerical outcomes of a random phenomenon.</li>
+<li>Discrete random variables can only take specific values (like integers), while continuous random variables can take any value in a given range or interval <sup><a href="https://www.geeksforgeeks.org/random-variable/">1</a> <a href="https://byjus.com/maths/random-variable/">2</a> <a href="http://isl.stanford.edu/~abbas/ee178/lect02-2.pdf">3</a> <a href="https://www.khanacademy.org/math/statistics-probability/random-variables-stats-library/random-variables-discrete/v/discrete-and-continuous-random-variables">4</a></sup>.</li>
+</ul>
+<p><strong>2. Conditional Probability:</strong></p>
+<ul>
+<li>Conditional probability is the probability of an event given that another event has occurred <sup><a href="https://byjus.com/maths/conditional-probability/">5</a> <a href="https://www.cuemath.com/data/conditional-probability/">6</a> <a href="https://www.geeksforgeeks.org/conditional-probability/">7</a></sup>.</li>
+<li>It is represented as P(A|B), which means the probability of event A given that event B has occurred.</li>
+</ul>
+<p><strong>3. Joint Probability Distribution:</strong></p>
+<ul>
+<li>Joint probability distribution represents a probability distribution for two or more random variables <sup><a href="https://stt.msu.edu/Academics/ClassPages/uploads/US19/351-201/Lecture-08.pdf">8</a> <a href="https://statisticsbyjim.com/probability/joint-probability/">9</a> <a href="https://byjus.com/maths/joint-probability/">10</a> <a href="https://en.wikipedia.org/wiki/Joint_probability_distribution">11</a></sup>.</li>
+<li>It is used to determine the probability that all of several events occur simultaneously.</li>
+</ul>
+<p><strong>4. Multivariate:</strong></p>
+<ul>
+<li>Multivariate analysis involves observation and analysis of more than one statistical outcome variable at a time <sup><a href="https://careerfoundry.com/en/blog/data-analytics/multivariate-analysis/">12</a> <a href="https://online.stat.psu.edu/stat505/">13</a> <a href="https://babar.heprc.uvic.ca/BFROOT/www/Statistics/mva.pdf">14</a> <a href="https://www.tutorialsduniya.com/notes/multivariate-calculus-notes/">15</a> <a href="http://www.statslab.cam.ac.uk/~pat/AppMultNotes.pdf">16</a></sup>.</li>
+<li>It provides a method to study the behavior of random variables simultaneously, allowing patterns and relationships to be observed.</li>
+</ul>
+<p><strong>5. Maximum A Posteriori (MAP) Criterion:</strong></p>
+<ul>
+<li>MAP is a Bayesian-based approach to estimating a distribution and model parameters that best explain an observed dataset <sup><a href="https://machinelearningmastery.com/maximum-a-posteriori-estimation/">17</a> <a href="https://www.probabilitycourse.com/chapter9/9_1_2_MAP_estimation.php">18</a> <a href="https://web.stanford.edu/class/archive/cs/cs109/cs109.1216/lectures/22_map.pdf">19</a></sup>.</li>
+<li>It calculates a conditional probability of observing the data given a model weighted by a prior probability or belief about the model.</li>
+</ul>
+<p><strong>6. Maximum Likelihood (ML) Criterion:</strong></p>
+<ul>
+<li>ML estimation is a method of estimating the parameters of a statistical model given observations.</li>
+<li>The ML estimates are the values of the parameters that maximize the likelihood function, making the observed data most probable.</li>
+</ul>
+<p>Remember, these are just brief overviews. For a deeper understanding, you should refer to textbooks or detailed course materials. Good luck with your exam!</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="module-3"><a class="header" href="#module-3">Module 3</a></h1>
+<h2 id="machine-learning-and-neural-networks"><a class="header" href="#machine-learning-and-neural-networks">Machine Learning and Neural Networks</a></h2>
+<ul>
+<li><a href="Module_3__Machine_Learning_and_Neural_Networks/./Introduction_to_AI-ML-DL_&amp;_Data_Analysis.html">Introduction to AI-ML-DL &amp; Data Analysis</a></li>
+<li><a href="Module_3__Machine_Learning_and_Neural_Networks/./Linear_Regression_Model.html">Linear Regression Model</a></li>
+<li><a href="Module_3__Machine_Learning_and_Neural_Networks/./Introduction__Supervised_&amp;_Unsupervised_Learning_Classification_&amp;_Regression_Models.html">Introduction - Supervised &amp; Unsupervised Learning, Classification &amp; Regression Models</a></li>
+<li><a href="Module_3__Machine_Learning_and_Neural_Networks/./Bayesian_Decision_Theory__Bayesian_Classifier_Discriminant_Functions_Minimum_Error_Rate_Classification.html">Bayesian Decision Theory - Bayesian Classifier, Discriminant Functions, Minimum Error Rate Classification</a></li>
+<li><a href="Module_3__Machine_Learning_and_Neural_Networks/./Na%C3%AFve_Bayes_Theory_with_example.html">Naïve Bayes Theory with example</a></li>
+<li><a href="Module_3__Machine_Learning_and_Neural_Networks/./Logistic_Regression_Model.html">Logistic Regression Model</a></li>
+<li><a href="Module_3__Machine_Learning_and_Neural_Networks/./Parameter_Estimation-Maximum_Likelihood.html">Parameter Estimation-Maximum Likelihood</a></li>
+<li><a href="Module_3__Machine_Learning_and_Neural_Networks/./Principal_Component_Aanalysis.html">Principal Component Aanalysis</a></li>
+<li><a href="Module_3__Machine_Learning_and_Neural_Networks/./Non-parametric_Techniques__K-Nearest_Neighbors_&amp;_Density_Estimation.html">Non-parametric Techniques - K-Nearest Neighbors &amp; Density Estimation</a></li>
+<li><a href="Module_3__Machine_Learning_and_Neural_Networks/./Decision_Tree__Entropy_Gini_Impurity_Index.html">Decision Tree - Entropy, Gini Impurity Index</a></li>
+<li><a href="Module_3__Machine_Learning_and_Neural_Networks/./Neural_networks_components.html">Neural Networks Components</a></li>
+<li><a href="Module_3__Machine_Learning_and_Neural_Networks/./Radial_Basis_Functions_and_K-means_Clustering.html">Radial Basis Functions and K-means Clustering</a></li>
+<li><a href="Module_3__Machine_Learning_and_Neural_Networks/./Support_Vector_Machine_(SVM).html">Support Vector Machine (SVM)</a></li>
+<li><a href="Module_3__Machine_Learning_and_Neural_Networks/./Random_Forest_Ensemble_Learning_Bagging_Boosting.html">Random Forest, Ensemble Learning, Bagging, Boosting</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="understanding-the-aimldl-landscape-and-data-analysis"><a class="header" href="#understanding-the-aimldl-landscape-and-data-analysis">Understanding the AI/ML/DL Landscape and Data Analysis</a></h1>
+<p>Here's a breakdown of these interconnected fields to prepare you for further exploration:</p>
+<p><strong>1. Artificial Intelligence (AI):</strong></p>
+<ul>
+<li><strong>Broad Goal:</strong> Create intelligent machines that can perform tasks typically requiring human intelligence (e.g., reasoning, learning, problem-solving).</li>
+<li><strong>Examples:</strong> Self-driving cars, virtual assistants, game-playing AI, medical diagnosis systems.</li>
+<li><strong>Types:</strong>
+<ul>
+<li><strong>Narrow AI (ANI):</strong> Excels at specific tasks (e.g., playing chess).</li>
+<li><strong>General AI (AGI):</strong> Hypothetical future AI with human-level intelligence across all domains.</li>
+</ul>
+</li>
+</ul>
+<p><strong>2. Machine Learning (ML):</strong></p>
+<ul>
+<li><strong>Subset of AI:</strong> Focuses on algorithms that can learn from data without explicit programming.</li>
+<li><strong>Core Concept:</strong> The ability to improve performance on a specific task over time through exposure to data.</li>
+<li><strong>Categories:</strong>
+<ul>
+<li><strong>Supervised Learning:</strong> Learns from labeled data (inputs with desired outputs).
+<ul>
+<li><strong>Example:</strong> Training a spam filter to identify spam emails.</li>
+</ul>
+</li>
+<li><strong>Unsupervised Learning:</strong> Discovers hidden patterns in unlabeled data.
+<ul>
+<li><strong>Example:</strong> Recommending movies based on a user's watch history.</li>
+</ul>
+</li>
+<li><strong>Reinforcement Learning:</strong> Learns by interacting with an environment and receiving rewards for desired behavior.
+<ul>
+<li><strong>Example:</strong> Training an AI to play video games by rewarding successful actions.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>3. Deep Learning (DL):</strong></p>
+<ul>
+<li><strong>Subset of ML:</strong> Uses artificial neural networks (inspired by the brain) to learn complex patterns from data.</li>
+<li><strong>Strengths:</strong> Particularly effective in tasks like image recognition, natural language processing, and speech recognition.</li>
+<li><strong>Complexity:</strong> Requires large amounts of data and computational power for training.</li>
+</ul>
+<p><strong>4. Data Analysis:</strong></p>
+<ul>
+<li><strong>Complementary Field:</strong> Focuses on extracting insights and knowledge from data.</li>
+<li><strong>Steps:</strong>
+<ul>
+<li><strong>Data Collection:</strong> Gathering data from various sources.</li>
+<li><strong>Data Cleaning:</strong> Preparing and processing data for analysis.</li>
+<li><strong>Exploratory Data Analysis (EDA):</strong> Gaining initial insights and understanding data characteristics.</li>
+<li><strong>Modeling:</strong> Building statistical models or ML models to learn from data.</li>
+<li><strong>Evaluation:</strong> Assessing the effectiveness of models and interpreting results.</li>
+</ul>
+</li>
+<li><strong>Importance:</strong> Provides the foundation for using data to inform decision-making in various applications, including AI and ML.</li>
+</ul>
+<p><strong>Key Relationships:</strong></p>
+<ul>
+<li>Data analysis provides the cleaned and processed data that fuels ML algorithms.</li>
+<li>ML algorithms can then be used to build models that extract valuable insights from data.</li>
+<li>AI systems often leverage these learned models to perform intelligent tasks in the real world.</li>
+</ul>
+<p>By understanding these interconnected fields, you'll gain a solid foundation for exploring specific areas of AI, ML, DL, and data analysis.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="demystifying-linear-regression"><a class="header" href="#demystifying-linear-regression">Demystifying Linear Regression</a></h1>
+<h2 id="a-core-machine-learning-model"><a class="header" href="#a-core-machine-learning-model">A Core Machine Learning Model</a></h2>
+<p>Linear regression is a fundamental statistical method and a foundational machine learning model widely used for <strong>predicting a continuous target variable based on a linear relationship with one or more predictor variables</strong>. Here's a breakdown of its key concepts and formulas:</p>
+<p><strong>1. Model Form:</strong></p>
+<p>The linear regression model assumes a linear relationship between the predictor variable(s) (X) and the target variable (y) represented by the equation:</p>
+<pre><code>y = β₀ + β₁X₁ + β₂X₂ + ... + βₙXₙ + ε
+</code></pre>
+<p>where:</p>
+<ul>
+<li>y is the predicted target variable (dependent variable)</li>
+<li>X₁ to Xₙ are the predictor variables (independent variables)</li>
+<li>β₀ is the intercept (y-axis value where the regression line crosses)</li>
+<li>β₁ to βₙ are the coefficients (slopes) for each predictor variable</li>
+<li>ε is the error term (accounts for the difference between the actual y values and the predicted y values)</li>
+</ul>
+<p><strong>2. Assumptions:</strong></p>
+<ul>
+<li>Linear relationship between X and y</li>
+<li>Homoscedasticity: Constant variance of errors across the entire range of X</li>
+<li>Independence of errors: Errors for different data points are not related</li>
+<li>Normality of errors: Errors are normally distributed</li>
+</ul>
+<p><strong>3. Least Squares Estimation:</strong></p>
+<p>The goal is to find the values of β₀, β₁, ..., βₙ that minimize the sum of squared errors between the predicted y values and the actual y values. This process is called least squares estimation.</p>
+<p><strong>4. Formulas:</strong></p>
+<ul>
+<li><strong>Slope (β) for a single predictor:</strong></li>
+</ul>
+<pre><code>β₁ = Σ((X₁ - X̅) * (y - ȳ)) / Σ(X₁ - X̅)²
+</code></pre>
+<p>where:</p>
+<ul>
+<li>
+<p>X̅ is the mean of all X₁ values</p>
+</li>
+<li>
+<p>ȳ is the mean of all y values</p>
+</li>
+<li>
+<p><strong>Multiple predictors:</strong> Similar formula with matrix operations for efficiency.</p>
+</li>
+</ul>
+<p><strong>5. Model Evaluation:</strong></p>
+<ul>
+<li><strong>R-squared:</strong> Measures the proportion of variance in the target variable explained by the model (0 to 1, closer to 1 indicates better fit)</li>
+<li><strong>Mean Squared Error (MSE):</strong> Average squared difference between predicted and actual y values (lower is better)</li>
+</ul>
+<p><strong>6. Applications:</strong></p>
+<p>Linear regression finds applications in various domains, including:</p>
+<ul>
+<li>Predicting housing prices based on features like size and location</li>
+<li>Forecasting sales based on historical data and marketing campaigns</li>
+<li>Analyzing customer behavior based on purchase history</li>
+</ul>
+<p><strong>Remember:</strong></p>
+<ul>
+<li>Linear regression is a powerful tool for modeling linear relationships.</li>
+<li>Understanding its assumptions and limitations is crucial for interpreting results and choosing the appropriate ML model.</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="unveiling-supervised-vs-unsupervised-learning--classification-vs-regression"><a class="header" href="#unveiling-supervised-vs-unsupervised-learning--classification-vs-regression">Unveiling Supervised vs. Unsupervised Learning &amp; Classification vs. Regression</a></h1>
+<p>This guide clarifies the fundamental concepts of supervised and unsupervised learning, along with classification and regression models:</p>
+<h2 id="unveiling-supervised-vs-unsupervised"><a class="header" href="#unveiling-supervised-vs-unsupervised">Unveiling Supervised vs. Unsupervised</a></h2>
+<p><strong>Supervised Learning:</strong></p>
+<ul>
+<li><strong>Goal:</strong> Learns a mapping from input data (X) to desired output labels (y) using labeled training data. It's like being shown examples and their answers to learn how to solve similar problems.</li>
+<li><strong>Examples:</strong> Spam filtering (spam/not spam), image classification (cat/dog), weather prediction (sunny/rainy).</li>
+</ul>
+<p><strong>Unsupervised Learning:</strong></p>
+<ul>
+<li><strong>Goal:</strong> Discovers hidden patterns or structures in unlabeled data (no predefined labels). It's like trying to understand the organization of a room full of objects without any labels.</li>
+<li><strong>Examples:</strong> Customer segmentation (grouping similar customers), anomaly detection (identifying unusual data points), dimensionality reduction (compressing data for efficiency).</li>
+</ul>
+<h3 id="key-differences"><a class="header" href="#key-differences">Key Differences</a></h3>
+<div class="table-wrapper"><table><thead><tr><th>Feature</th><th>Supervised Learning</th><th>Unsupervised Learning</th></tr></thead><tbody>
+<tr><td>Labeled Data</td><td>Required</td><td>Not Required</td></tr>
+<tr><td>Task</td><td>Prediction</td><td>Pattern Discovery</td></tr>
+<tr><td>Examples</td><td>Spam filtering, Image classification</td><td>Customer segmentation, Anomaly detection</td></tr>
+</tbody></table>
+</div>
+<h2 id="classification-vs-regression-models"><a class="header" href="#classification-vs-regression-models">Classification vs. Regression Models</a></h2>
+<p><strong>Classification Models:</strong></p>
+<ul>
+<li><strong>Task:</strong> Predict discrete categories or classes for new data points.</li>
+<li><strong>Output:</strong> Categorical labels (e.g., spam/not spam, cat/dog).</li>
+<li><strong>Examples:</strong> Logistic regression, Support Vector Machines (SVM), Decision Trees.</li>
+</ul>
+<p><strong>Regression Models:</strong></p>
+<ul>
+<li><strong>Task:</strong> Predict continuous target values for new data points.</li>
+<li><strong>Output:</strong> Continuous numerical values (e.g., housing price, temperature).</li>
+<li><strong>Examples:</strong> Linear regression, Polynomial regression, Random Forests.</li>
+</ul>
+<h3 id="key-differences-1"><a class="header" href="#key-differences-1">Key Differences</a></h3>
+<div class="table-wrapper"><table><thead><tr><th>Feature</th><th>Classification Models</th><th>Regression Models</th></tr></thead><tbody>
+<tr><td>Output</td><td>Discrete Categories</td><td>Continuous Values</td></tr>
+<tr><td>Examples</td><td>Logistic regression, SVM</td><td>Linear regression, Random Forests</td></tr>
+</tbody></table>
+</div>
+<p>By understanding these distinctions, you'll be well-equipped to choose the appropriate learning approach and model type for your specific machine learning tasks.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="demystifying-bayesian-decision-theory-for-ml"><a class="header" href="#demystifying-bayesian-decision-theory-for-ml">Demystifying Bayesian Decision Theory for ML</a></h1>
+<h2 id="classifiers-and-error-rates"><a class="header" href="#classifiers-and-error-rates">Classifiers and Error Rates</a></h2>
+<p>Bayesian decision theory provides a powerful framework for making optimal decisions in classification problems under uncertainty. Here's a breakdown of key concepts relevant to machine learning:</p>
+<p><strong>1. Bayesian Classifier:</strong></p>
+<ul>
+<li>Employs Bayes' theorem to calculate the posterior probability of a data point belonging to each possible class, given the observed features.</li>
+<li>Selects the class with the highest posterior probability for classification.</li>
+</ul>
+<p><strong>2. Bayes' Theorem:</strong></p>
+<ul>
+<li>
+<p><strong>Formula:</strong></p>
+<pre><code>P(B | A) = (P(A | B) * P(B)) / P(A)
+</code></pre>
+<p>where:</p>
+<ul>
+<li>P(B | A) is the posterior probability of class B given data point A</li>
+<li>P(A | B) is the likelihood of observing data point A given class B (often estimated from the training data)</li>
+<li>P(B) is the prior probability of class B (represents prior knowledge about class distribution)</li>
+<li>P(A) is the total probability of observing data point A (usually a constant value)</li>
+</ul>
+</li>
+</ul>
+<p><strong>3. Discriminant Functions:</strong></p>
+<ul>
+<li>Represent the decision boundaries between classes in the feature space.</li>
+<li>Constructed based on the posterior probabilities or likelihoods.</li>
+<li>Different classifiers use different forms of discriminant functions.</li>
+</ul>
+<p><strong>4. Minimum Error Rate (MER) Classification:</strong></p>
+<ul>
+<li>Goal: Minimize the probability of misclassification (choosing the wrong class).</li>
+<li>Bayesian classifier achieves the MER by assigning a data point to the class with the highest posterior probability.</li>
+</ul>
+<p><strong>5. Advantages of Bayesian Classifiers:</strong></p>
+<ul>
+<li>Integrates prior knowledge (through priors) into the decision process.</li>
+<li>Provides a principled approach to handling uncertainty in classification.</li>
+<li>Can be used with various probability distributions for features.</li>
+</ul>
+<p><strong>6. Challenges of Bayesian Classifiers:</strong></p>
+<ul>
+<li>Requires estimating prior probabilities, which might not always be readily available.</li>
+<li>Computational complexity can increase with high-dimensional data or complex class distributions.</li>
+</ul>
+<p><strong>7. Examples of Bayesian Classifiers:</strong></p>
+<ul>
+<li>Naive Bayes classifier (a simple and efficient implementation)</li>
+<li>Gaussian Mixture Models (GMMs) for modeling complex class distributions</li>
+</ul>
+<p><strong>Remember:</strong></p>
+<ul>
+<li>Bayesian decision theory offers a powerful framework for classification, but understanding its assumptions and limitations is crucial for effective application in ML.</li>
+<li>Consider the trade-offs between computational complexity and model performance when choosing a Bayesian classifier for your problem.</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="naive-bayes-theory"><a class="header" href="#naive-bayes-theory">Naive Bayes Theory</a></h1>
+<h2 id="naive-bayes-explained-with-an-example"><a class="header" href="#naive-bayes-explained-with-an-example">Naive Bayes Explained with an Example</a></h2>
+<p>Naive Bayes is a popular supervised learning algorithm for classification problems. It's known for its simplicity and efficiency, making it a good choice for various tasks. Here's a breakdown of the theory with an example:</p>
+<p><strong>The Naive Assumption:</strong></p>
+<p>Naive Bayes works based on the assumption of <strong>conditional independence</strong>: features used for classification are independent of each other given the class label. While this assumption doesn't always hold true in reality, it often works well in practice, especially for high-dimensional data.</p>
+<p><strong>Classification Process:</strong></p>
+<ol>
+<li><strong>Training:</strong> The algorithm learns the probability of each feature value occurring for each class from the training data.</li>
+<li><strong>Prediction:</strong> For a new data point (unknown class), the algorithm calculates the posterior probability of it belonging to each class. It achieves this by:
+<ul>
+<li>Calculating the probability of each feature value in the new data point for each class (using the learned probabilities from training).</li>
+<li>Applying Bayes' theorem to combine these individual feature probabilities and the prior probability of each class (if available) to get the posterior probability.</li>
+</ul>
+</li>
+<li><strong>Decision:</strong> The new data point is assigned to the class with the highest posterior probability.</li>
+</ol>
+<p><strong>Example: Email Classification (Spam or Not Spam)</strong></p>
+<p>Imagine you have a dataset of emails labeled as "spam" or "not spam." Each email can be represented by features like presence of certain words (e.g., "free," "urgent"), number of capital letters, etc.</p>
+<ul>
+<li>
+<p><strong>Training:</strong></p>
+<ul>
+<li>The algorithm learns the probability of each word appearing in a spam email and a non-spam email (e.g., $P('free' | spam)$ and $P('free' | not spam)$).</li>
+<li>It also learns the prior probabilities of emails being spam or not spam (e.g., $P(spam)$ and $P(not spam)$).</li>
+</ul>
+</li>
+<li>
+<p><strong>Prediction:</strong></p>
+<ul>
+<li>Suppose a new email arrives containing the words "free" and "urgent."</li>
+<li>Naive Bayes calculates the probabilities:
+<ul>
+<li>$P('free' | spam) * P('urgent' | spam) * P(spam)$ and</li>
+<li>$P('free' | not spam) * P('urgent' | not spam) * P(not spam)$.</li>
+</ul>
+</li>
+<li>It then compares the posterior probabilities and classifies the email as spam if the first probability is higher, or not spam otherwise.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Advantages:</strong></p>
+<ul>
+<li>Simple to implement and understand.</li>
+<li>Efficient for large datasets.</li>
+<li>Handles high-dimensional data well.</li>
+</ul>
+<p><strong>Disadvantages:</strong></p>
+<ul>
+<li>Assumes independence of features, which might not always be true.</li>
+<li>Sensitive to features with zero probability in a class (can be addressed with smoothing techniques).</li>
+</ul>
+<p><strong>Remember:</strong></p>
+<p>Naive Bayes is a powerful tool for classification, but it's important to be aware of its assumptions and limitations. Explore other classification algorithms like Support Vector Machines (SVM) or Decision Trees for more complex problems.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="unveiling-the-logistic-regression-model"><a class="header" href="#unveiling-the-logistic-regression-model">Unveiling the Logistic Regression Model</a></h1>
+<h2 id="classification-with-probabilities"><a class="header" href="#classification-with-probabilities">Classification with Probabilities</a></h2>
+<p>Logistic regression is a fundamental supervised learning algorithm widely used for <strong>binary classification tasks</strong>. Here's a breakdown of its core concepts and how it tackles classification:</p>
+<p><strong>Classification with Probabilities:</strong></p>
+<ul>
+<li>Unlike some classification algorithms that directly predict class labels (e.g., spam/not spam), logistic regression outputs a <strong>probability</strong> between 0 and 1 representing the likelihood of a data point belonging to a specific class (often the positive class).</li>
+<li>A threshold (usually 0.5) is used for decision-making:
+<ul>
+<li>If the predicted probability is greater than the threshold, the data point is classified as positive.</li>
+<li>Otherwise, it's classified as negative.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Model Form:</strong></p>
+<p>Logistic regression employs the <strong>sigmoid function</strong> (also called the logistic function) to map the linear combination of input features (X) to a probability between 0 and 1. The formula for the model is:</p>
+<pre><code>h(X) = σ(β₀ + β₁X₁ + β₂X₂ + ... + βₙXₙ)
+</code></pre>
+<p>where:</p>
+<ul>
+<li>h(X) is the predicted probability (between 0 and 1)</li>
+<li>σ (sigma) is the sigmoid function</li>
+<li>β₀ is the intercept</li>
+<li>β₁ to βₙ are the coefficients for each predictor variable (X₁ to Xₙ)</li>
+</ul>
+<p><strong>Learning the Model Parameters:</strong></p>
+<p>Similar to linear regression, logistic regression uses a technique called <strong>maximum likelihood estimation</strong> to find the values of the coefficients (β) that maximize the likelihood of observing the training data.</p>
+<p><strong>Applications:</strong></p>
+<p>Logistic regression is used in various classification tasks, including:</p>
+<ul>
+<li>Spam filtering</li>
+<li>Image classification (binary cases, e.g., cat/dog)</li>
+<li>Customer churn prediction (will a customer leave?)</li>
+<li>Fraud detection</li>
+</ul>
+<p><strong>Advantages:</strong></p>
+<ul>
+<li>Simple to interpret: Coefficients provide insights into the relative importance of features.</li>
+<li>Interpretable predictions: Probabilities offer a confidence measure in the classification.</li>
+<li>Relatively efficient to train, especially for smaller datasets.</li>
+</ul>
+<p><strong>Disadvantages:</strong></p>
+<ul>
+<li>Assumes a linear relationship between features and the log-odds of the target variable. May not be suitable for highly non-linear relationships.</li>
+<li>Limited to binary classification problems. For multi-class problems, extensions like multinomial logistic regression or one-vs-rest strategies are needed.</li>
+</ul>
+<p><strong>Remember:</strong></p>
+<p>Logistic regression is a powerful tool for binary classification tasks. It offers interpretability and can be a good starting point for many classification problems. However, consider exploring other algorithms like Support Vector Machines (SVM) or Decision Trees for more complex problems or those with non-linear relationships between features and the target variable.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="parameter-estimation-maximum-likelihood"><a class="header" href="#parameter-estimation-maximum-likelihood">Parameter Estimation-Maximum Likelihood</a></h1>
+<h2 id="maximum-likelihood-estimation-mle-for-parameter-estimation-in-machine-learning"><a class="header" href="#maximum-likelihood-estimation-mle-for-parameter-estimation-in-machine-learning">Maximum Likelihood Estimation (MLE) for Parameter Estimation in Machine Learning</a></h2>
+<p><strong>Concept:</strong></p>
+<p>Maximum Likelihood Estimation (MLE) is a fundamental statistical method widely used in machine learning for estimating the <strong>parameters</strong> of a probability distribution that best describe a given dataset. It assumes that the observed data was generated by the chosen probability distribution with unknown parameters.</p>
+<p><strong>Goal:</strong></p>
+<p>The goal of MLE is to find the values of the parameters that <strong>maximize the likelihood</strong> of observing the actual data points. In simpler terms, we want to find the parameter values that make the observed data the most <strong>probable</strong> under the assumed probability distribution.</p>
+<p><strong>Formula:</strong></p>
+<p>For a dataset D containing n data points (x₁, x₂, ..., xₙ), the likelihood function (L) represents the probability of observing this specific dataset given a set of parameters (θ). The formula depends on the chosen probability distribution.</p>
+<p>Here's a general form:</p>
+<pre><code>L(θ | D) = P(x₁ | θ) * P(x₂ | θ) * ... * P(xₙ | θ)
+</code></pre>
+<p>where:</p>
+<ul>
+<li>L(θ | D) is the likelihood function</li>
+<li>θ represents the parameters we want to estimate</li>
+<li>P(xᵢ | θ) is the probability of observing data point xᵢ given the parameters θ</li>
+</ul>
+<p>However, maximizing the product of multiple probabilities can be cumbersome. Therefore, we often work with the <strong>log-likelihood function</strong>, which is the logarithm of the likelihood function:</p>
+<pre><code>log L(θ | D) = log(P(x₁ | θ) * P(x₂ | θ) * ... * P(xₙ | θ))
+</code></pre>
+<p>Since the logarithm is a monotonic function (it preserves the order), maximizing the log-likelihood function is equivalent to maximizing the likelihood function itself.</p>
+<p><strong>Optimization Algorithm:</strong></p>
+<p>MLE involves finding the values of θ that maximize the log-likelihood function. This optimization problem can be solved using various algorithms, such as:</p>
+<ul>
+<li>Gradient descent: An iterative algorithm that takes steps in the direction opposite the gradient (steepest descent) of the log-likelihood function, gradually reaching the maximum.</li>
+<li>Other optimization algorithms like Newton-Raphson method or L-BFGS can also be used.</li>
+</ul>
+<p><strong>Applications in Machine Learning:</strong></p>
+<p>MLE is used for parameter estimation in various machine learning models, including:</p>
+<ul>
+<li><strong>Linear regression:</strong> Estimating the slope and intercept coefficients that best fit the data points.</li>
+<li><strong>Logistic regression:</strong> Estimating the coefficients that determine the probability of a data point belonging to a specific class.</li>
+<li><strong>Hidden Markov Models (HMMs):</strong> Estimating transition probabilities and emission probabilities for modeling sequential data.</li>
+<li><strong>Gaussian Mixture Models (GMMs):</strong> Estimating the means and covariance matrices of each component Gaussian distribution in the mixture.</li>
+</ul>
+<p><strong>Advantages:</strong></p>
+<ul>
+<li>Widely applicable to various probability distributions.</li>
+<li>Offers a principled approach to parameter estimation.</li>
+<li>Often leads to statistically efficient estimators (achieves low variance).</li>
+</ul>
+<p><strong>Disadvantages:</strong></p>
+<ul>
+<li>May not always have a closed-form solution, requiring iterative optimization algorithms.</li>
+<li>Sensitive to outliers in the data.</li>
+<li>Can be computationally expensive for complex models with many parameters.</li>
+</ul>
+<p><strong>Remember:</strong></p>
+<p>MLE is a powerful tool for estimating parameters in machine learning models. However, understanding its assumptions and limitations is crucial for interpreting the estimated parameters and the performance of the model. Consider exploring other parameter estimation methods like Bayesian inference for incorporating prior knowledge when available.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="principal-component-analysis"><a class="header" href="#principal-component-analysis">Principal Component Analysis</a></h1>
+<h2 id="demystifying-principal-component-analysis-pca-for-dimensionality-reduction"><a class="header" href="#demystifying-principal-component-analysis-pca-for-dimensionality-reduction">Demystifying Principal Component Analysis (PCA) for Dimensionality Reduction</a></h2>
+<p>Principal Component Analysis (PCA) is a cornerstone technique in machine learning and data analysis used for <strong>dimensionality reduction</strong>. Here's a breakdown of its core concepts and how it helps manage high-dimensional data:</p>
+<p><strong>The Curse of Dimensionality:</strong></p>
+<p>As the number of features (dimensions) in a dataset increases, machine learning algorithms can struggle with the complexity and may suffer from issues like increased computational cost and overfitting. PCA addresses this challenge by reducing the dimensionality of the data while preserving the most important information.</p>
+<p><strong>Core Idea:</strong></p>
+<p>PCA identifies a new set of features, called <strong>principal components (PCs)</strong>, that capture the maximum variance in the original data. These PCs are uncorrelated linear combinations of the original features.</p>
+<p><strong>Steps of PCA:</strong></p>
+<ol>
+<li><strong>Centering the data:</strong> Subtract the mean value from each feature to ensure all features are centered around zero.</li>
+<li><strong>Computing the covariance matrix:</strong> This matrix captures the relationships between all pairs of features.</li>
+<li><strong>Eigenvalue decomposition (EVD):</strong> Decompose the covariance matrix to obtain eigenvalues and eigenvectors. Eigenvalues represent the variance explained by each eigenvector.</li>
+<li><strong>Selecting principal components:</strong> Choose the eigenvectors with the highest eigenvalues (corresponding to the most variance). These eigenvectors represent the principal components.</li>
+<li><strong>Projecting data onto PCs:</strong> Transform the original data points onto the subspace spanned by the chosen principal components.</li>
+</ol>
+<p><strong>Benefits of PCA:</strong></p>
+<ul>
+<li>Reduces computational cost for machine learning algorithms by lowering data dimensionality.</li>
+<li>Improves model performance by alleviating the curse of dimensionality.</li>
+<li>Can be used for visualization by projecting high-dimensional data onto a lower-dimensional space for easier interpretation.</li>
+<li>Identifies underlying factors or patterns in the data through the principal components.</li>
+</ul>
+<p><strong>Choosing the Number of Components:</strong></p>
+<p>There's no single rule for selecting the number of principal components. It often involves a trade-off between retaining variance and reducing dimensionality. Common approaches include:</p>
+<ul>
+<li><strong>Explained variance ratio:</strong> Choose components that explain a certain percentage (e.g., 90%) of the total variance.</li>
+<li><strong>Scree plot:</strong> Visualize the eigenvalues, and identify the "elbow" where the eigenvalues start dropping significantly.</li>
+</ul>
+<p><strong>Remember:</strong></p>
+<p>PCA is a powerful dimensionality reduction technique, but it's important to understand its assumptions:</p>
+<ul>
+<li>Linear relationships between features. PCA might not be ideal for capturing non-linear relationships.</li>
+<li>No inherent meaning to principal components. They are derived transformations, and interpreting them may require domain knowledge.</li>
+</ul>
+<p>Consider exploring other dimensionality reduction techniques like t-distributed Stochastic Neighbor Embedding (t-SNE) for visualizing high-dimensional data with non-linear relationships.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="non-parametric-powerhouses"><a class="header" href="#non-parametric-powerhouses">Non-parametric Powerhouses</a></h1>
+<h2 id="k-nearest-neighbors-knn-and-density-estimation"><a class="header" href="#k-nearest-neighbors-knn-and-density-estimation">K-Nearest Neighbors (KNN) and Density Estimation</a></h2>
+<p>Machine learning often deals with complex data patterns that might not fit neatly into predefined models. Here, non-parametric techniques come to the rescue! Let's delve into two key methods: K-Nearest Neighbors (KNN) and Density Estimation.</p>
+<p><strong>1. K-Nearest Neighbors (KNN):</strong></p>
+<ul>
+<li>
+<p><strong>Concept:</strong> A versatile technique for both classification and regression tasks. It makes predictions based on the labels or values of the <strong>k nearest neighbors</strong> in the training data for a new data point.</p>
+</li>
+<li>
+<p><strong>Classification:</strong></p>
+<ul>
+<li>Assigns the new data point the most frequent class label (or average value for regression) among its k nearest neighbors.</li>
+</ul>
+</li>
+<li>
+<p><strong>Regression:</strong></p>
+<ul>
+<li>Predicts the value for the new data point by averaging the values of its k nearest neighbors.</li>
+</ul>
+</li>
+<li>
+<p><strong>Advantages:</strong></p>
+<ul>
+<li>Simple to implement and understand.</li>
+<li>Makes no assumptions about the underlying data distribution.</li>
+<li>Useful for complex and non-linear relationships.</li>
+</ul>
+</li>
+<li>
+<p><strong>Disadvantages:</strong></p>
+<ul>
+<li>Performance can be sensitive to the choice of k (distance metric can also impact results).</li>
+<li>Requires storing the entire training data for prediction (computational cost can increase with large datasets).</li>
+</ul>
+</li>
+</ul>
+<p><strong>2. Density Estimation:</strong></p>
+<ul>
+<li>
+<p><strong>Concept:</strong> Aims to estimate the probability density function (PDF) of a random variable underlying the data. The PDF describes how likely it is to find a data point at a specific value.</p>
+</li>
+<li>
+<p><strong>KNN Density Estimation:</strong></p>
+<ul>
+<li>A non-parametric approach that estimates the density at a point based on the number of data points within its k-nearest neighborhood. Higher density regions have more data points close together.</li>
+</ul>
+</li>
+<li>
+<p><strong>Advantages:</strong></p>
+<ul>
+<li>Flexible and can adapt to various data distributions.</li>
+<li>Relatively easy to implement.</li>
+</ul>
+</li>
+<li>
+<p><strong>Disadvantages:</strong></p>
+<ul>
+<li>Sensitive to the choice of k and distance metric.</li>
+<li>Smoothing techniques might be needed to avoid overfitting or underfitting the density function.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Key Differences:</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Feature</th><th>K-Nearest Neighbors (KNN)</th><th>Density Estimation</th></tr></thead><tbody>
+<tr><td>Task</td><td>Classification/Regression</td><td>Estimating PDF</td></tr>
+<tr><td>Prediction Type</td><td>Class label/Value (based on neighbors)</td><td>Probability density</td></tr>
+<tr><td>Underlying Model</td><td>No assumptions</td><td>Non-parametric</td></tr>
+</tbody></table>
+</div>
+<p><strong>Understanding these non-parametric techniques empowers you to tackle problems where data distributions might be unknown or complex. Remember to experiment with different parameter values (k, distance metric) to optimize their performance for your specific data and task.</strong></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="unveiling-decision-trees"><a class="header" href="#unveiling-decision-trees">Unveiling Decision Trees</a></h1>
+<h2 id="classification-with-a-hierarchical-approach"><a class="header" href="#classification-with-a-hierarchical-approach">Classification with a Hierarchical Approach</a></h2>
+<p>Decision trees are a fundamental machine learning model for <strong>classification</strong> tasks. They are known for their interpretability and ease of use. Here's a breakdown of their core concepts, along with two common metrics used for splitting decisions: Entropy and Gini Impurity Index.</p>
+<p><strong>Decision Tree Structure:</strong></p>
+<p>A decision tree resembles a flowchart, starting with a <strong>root node</strong> representing the entire dataset. Subsequent nodes represent <strong>splits</strong> based on features (attributes) of the data. Each split leads to <strong>branches</strong> containing data points that share a specific feature value. Leaf nodes (terminal nodes) represent the final classification decisions.</p>
+<p><strong>Classification Process:</strong></p>
+<ol>
+<li>A new data point traverses the tree starting from the root node.</li>
+<li>At each internal node, the data point's feature value is compared to the splitting condition.</li>
+<li>The data point is directed to the left or right branch based on the comparison.</li>
+<li>The process continues until the data point reaches a leaf node, which assigns the predicted class label.</li>
+</ol>
+<p><strong>Choosing Splitting Features:</strong></p>
+<p>The key to a good decision tree is selecting the <strong>best feature</strong> to split on at each node. Two common metrics guide this choice:</p>
+<ul>
+<li>
+<p><strong>Entropy (Information Gain):</strong> Measures the <strong>uncertainty</strong> (or randomness) in a dataset. Splitting on a feature that leads to the greatest reduction in entropy results in a purer (more homogeneous) classification at the child nodes.</p>
+<pre><code>Entropy(S) = -Σ (pi * log2(pi))
+</code></pre>
+<p>where:</p>
+<ul>
+<li>S is the dataset</li>
+<li>pi is the proportion of data points in S belonging to class i</li>
+</ul>
+</li>
+<li>
+<p><strong>Gini Impurity Index:</strong> Measures the <strong>probability of a randomly chosen data point from a node being misclassified</strong> if labeled based on the class distribution at that node. Splitting on a feature that minimizes the Gini impurity leads to a purer separation of classes.</p>
+<pre><code>Gini(S) = 1 - Σ (pi²)
+</code></pre>
+<p>where:</p>
+<ul>
+<li>S is the dataset</li>
+<li>pi is the proportion of data points in S belonging to class i</li>
+</ul>
+</li>
+</ul>
+<p><strong>Example: Email Classification</strong></p>
+<p>Imagine a dataset of emails labeled as "spam" or "not spam." Features might include presence of certain words (e.g., "free," "urgent"), sender address, etc.</p>
+<ul>
+<li>The root node might represent all emails.</li>
+<li>The tree could split first on the presence of the word "free," sending emails with "free" to one branch and those without to another.</li>
+<li>Further splits could occur based on other features, ultimately leading to leaf nodes classifying emails as spam or not spam.</li>
+</ul>
+<p><strong>Advantages:</strong></p>
+<ul>
+<li>Easy to interpret: The tree structure provides a clear view of the decision-making process.</li>
+<li>Handles both categorical and numerical features.</li>
+<li>Relatively robust to outliers.</li>
+</ul>
+<p><strong>Disadvantages:</strong></p>
+<ul>
+<li>Prone to overfitting if not carefully grown (e.g., using techniques like pruning).</li>
+<li>Performance can depend on the order features are considered for splitting.</li>
+</ul>
+<p><strong>Remember:</strong></p>
+<p>Decision trees offer a powerful and interpretable approach to classification. Experiment with different splitting criteria (Entropy vs. Gini) and consider techniques to prevent overfitting for optimal performance.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="neural-networks-components"><a class="header" href="#neural-networks-components">Neural Networks Components</a></h1>
+<h2 id="neurons-perceptron-multilayer-perceptron-lms-feedforward-operation-backpropagation-algorithm-activation-function-loss-function-xor-problem-cross-validation-regularisation-demonstration-on-classification-and-regression-applications"><a class="header" href="#neurons-perceptron-multilayer-perceptron-lms-feedforward-operation-backpropagation-algorithm-activation-function-loss-function-xor-problem-cross-validation-regularisation-demonstration-on-classification-and-regression-applications">Neurons, Perceptron, Multilayer Perceptron, LMS, Feedforward Operation, Backpropagation Algorithm, Activation Function, Loss Function, XOR Problem, Cross-validation, Regularisation, Demonstration on Classification and Regression Applications</a></h2>
+<p>Absolutely, here's a comprehensive explanation of the concepts you requested, along with demonstrations on classification and regression applications:</p>
+<p><strong>Neurons:</strong></p>
+<p>The fundamental unit of an Artificial Neural Network (ANN). Neurons are inspired by biological neurons and process information. A typical neuron receives multiple inputs, applies a weighted sum, and then passes the result through an activation function to generate an output.</p>
+<p><strong>Perceptron:</strong></p>
+<p>The simplest form of an ANN. It consists of a single neuron with a linear activation function (often a threshold function). Perceptrons can only learn linearly separable problems (problems where a straight line can perfectly divide the data into classes).</p>
+<p><strong>Multilayer Perceptron (MLP):</strong></p>
+<p>An ANN with multiple layers of perceptrons stacked on top of each other. This allows MLPs to learn more complex patterns compared to single perceptrons. The most common MLP architecture is a feedforward network, where information flows in one direction from the input layer to the output layer.</p>
+<p><strong>Learning Mechanisms:</strong></p>
+<p><strong>1. Least Mean Squares (LMS):</strong></p>
+<p>A common algorithm used to train MLPs for regression problems. It adjusts the weights of the network to minimize the squared difference between the predicted and actual target values.</p>
+<p><strong>2. Feedforward Operation:</strong></p>
+<p>The process of propagating information through the network during prediction. Input data enters the network, is multiplied by weights, summed, and passed through activation functions at each layer until it reaches the output layer.</p>
+<p><strong>3. Backpropagation Algorithm:</strong></p>
+<p>A crucial training algorithm for MLPs used in both classification and regression tasks. It propagates the error (difference between predicted and actual values) backwards through the network, adjusting the weights in each layer to minimize the overall error.</p>
+<p><strong>Activation Functions:</strong></p>
+<p>Functions applied to the weighted sum of inputs at each neuron to introduce non-linearity. Common activation functions include:</p>
+<ul>
+<li>Sigmoid: Outputs a value between 0 and 1, suitable for classification problems with binary outputs.</li>
+<li>ReLU (Rectified Linear Unit): Outputs the input directly if positive, otherwise outputs zero. Popular for its efficiency in training.</li>
+</ul>
+<p><strong>Loss Function:</strong></p>
+<p>A function that measures the error between the predicted and actual values. Common loss functions include:</p>
+<ul>
+<li>Mean Squared Error (MSE): Often used with LMS for regression problems (measures average squared difference).</li>
+<li>Cross-Entropy: Commonly used for classification problems (measures how well the predicted probabilities match the actual distribution).</li>
+</ul>
+<p><strong>XOR Problem:</strong></p>
+<p>A classic example demonstrating the limitations of perceptrons. It's a logical operation where the output is true only if one input is true and the other is false, or vice versa. Perceptrons cannot solve the XOR problem due to their linear nature. MLPs with hidden layers and non-linear activation functions can solve the XOR problem.</p>
+<p><strong>Cross-validation:</strong></p>
+<p>A technique to evaluate the performance of a model on unseen data. It involves splitting the data into training and validation sets. The model is trained on the training set and evaluated on the validation set. This process helps prevent overfitting (the model memorizing the training data instead of learning general patterns).</p>
+<p><strong>Regularization:</strong></p>
+<p>Techniques to prevent overfitting in neural networks. Common methods include:</p>
+<ul>
+<li>L1/L2 Regularization: Penalizes the model for having large weights, encouraging simpler models.</li>
+<li>Dropout: Randomly drops neurons during training, forcing the network to learn more robust features.</li>
+</ul>
+<p><strong>Demonstrations:</strong></p>
+<p><strong>1. Classification (Logistic Regression vs. MLP):</strong></p>
+<p>Imagine classifying handwritten digits (0-9).</p>
+<ul>
+<li><strong>Logistic Regression:</strong> A simple model can achieve reasonable accuracy, but might struggle with complex variations in digit shapes.</li>
+<li><strong>MLP:</strong> With hidden layers and a non-linear activation function like ReLU, an MLP can potentially achieve higher accuracy by capturing more intricate patterns in the data.</li>
+</ul>
+<p><strong>2. Regression (Linear Regression vs. MLP):</strong></p>
+<p>Imagine predicting house prices based on features like size and location.</p>
+<ul>
+<li><strong>Linear Regression:</strong> If the relationship between features and price is mostly linear, a linear regression model might suffice.</li>
+<li><strong>MLP:</strong> If the relationship is more complex (e.g., location has a non-linear impact on price), an MLP could learn these complex patterns and potentially achieve better predictions.</li>
+</ul>
+<p><strong>Remember:</strong></p>
+<p>The choice between models depends on the problem and data complexity. Neural networks offer more power and flexibility but require careful training and hyperparameter tuning to avoid overfitting.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="unveiling-radial-basis-functions-rbfs-and-their-link-to-k-means-clustering"><a class="header" href="#unveiling-radial-basis-functions-rbfs-and-their-link-to-k-means-clustering">Unveiling Radial Basis Functions (RBFs) and their Link to K-means Clustering</a></h1>
+<p>While not directly used together in the traditional sense, Radial Basis Functions (RBFs) and K-means clustering share connections within the realm of machine learning. Here's a breakdown of each concept and how they can be related:</p>
+<p><strong>Radial Basis Functions (RBFs):</strong></p>
+<ul>
+<li><strong>Function Type:</strong> Kernel functions used in kernel-based learning methods like Support Vector Machines (SVMs).</li>
+<li><strong>Properties:</strong>
+<ul>
+<li>Outputs a value based on the distance between the input and a center point.</li>
+<li>Common RBF: Gaussian function (bell-shaped curve).</li>
+<li>Values decrease as the distance from the center increases.</li>
+</ul>
+</li>
+<li><strong>Applications:</strong>
+<ul>
+<li>Kernel SVMs: RBF kernels enable SVMs to handle non-linear data by implicitly mapping it to a higher-dimensional space.</li>
+<li>Radial Basis Function Networks (RBFNs): Similar to MLPs, but use RBF activation functions in hidden layers.</li>
+</ul>
+</li>
+</ul>
+<p><strong>K-means Clustering:</strong></p>
+<ul>
+<li><strong>Algorithm:</strong> An unsupervised learning technique for grouping data points into a predefined number of clusters (k).</li>
+<li><strong>Process:</strong>
+<ol>
+<li>Initialize k cluster centers (centroids) randomly or strategically.</li>
+<li>Assign each data point to the closest centroid (based on distance metric like Euclidean distance).</li>
+<li>Re-compute the centroid of each cluster as the mean of its assigned data points.</li>
+<li>Repeat steps 2 and 3 until the centroids no longer significantly change (convergence).</li>
+</ol>
+</li>
+<li><strong>Applications:</strong>
+<ul>
+<li>Customer segmentation: Grouping customers based on purchase history for targeted marketing.</li>
+<li>Anomaly detection: Identifying data points that deviate significantly from clusters.</li>
+</ul>
+</li>
+</ul>
+<p><strong>The Connection:</strong></p>
+<ul>
+<li><strong>RBF Network Initialization:</strong> K-means clustering can be used to initialize the centers of hidden layer neurons in an RBF network. This can be a good strategy for placing the hidden units in informative regions of the feature space, potentially improving the network's performance.</li>
+<li><strong>Similarities in Philosophy:</strong> Both RBFs and K-means clustering involve the concept of <strong>distance</strong> between data points and a central point (centroid in K-means, center of the RBF function).</li>
+</ul>
+<p><strong>Important Note:</strong></p>
+<p>While K-means clustering can be used for initialization in RBF networks, they serve distinct purposes:</p>
+<ul>
+<li><strong>K-means:</strong> Unsupervised learning for data exploration and grouping.</li>
+<li><strong>RBFs:</strong> Kernel functions for supervised learning tasks like classification (in SVMs) or non-linear regression (in RBFNs).</li>
+</ul>
+<p><strong>Additional Points:</strong></p>
+<ul>
+<li>RBF networks can be seen as a type of shallow neural network with a single hidden layer using RBF activation functions.</li>
+<li>Other techniques besides K-means can be used to initialize the centers in RBF networks.</li>
+</ul>
+<p><strong>Remember:</strong></p>
+<p>Understanding RBFs and K-means clustering equips you with valuable tools for different machine learning tasks. While they operate independently, their underlying concepts of distance and central points can be conceptually linked.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="support-vector-machines-svms"><a class="header" href="#support-vector-machines-svms">Support Vector Machines (SVMs)</a></h1>
+<h2 id="unveiling-the-powerful-margin-maximizers"><a class="header" href="#unveiling-the-powerful-margin-maximizers">Unveiling the Powerful Margin Maximizers</a></h2>
+<p>Support Vector Machines (SVMs) are a powerful family of supervised learning algorithms widely used for classification and regression tasks. Here's a breakdown of their core concepts:</p>
+<p><strong>Core Idea:</strong></p>
+<p>SVMs aim to find the optimal <strong>hyperplane</strong> (decision boundary) in a high-dimensional space that best separates the data points belonging to different classes. They achieve this by maximizing the <strong>margin</strong> between the hyperplane and the closest data points from each class, called <strong>support vectors</strong>.</p>
+<p><strong>Key Components:</strong></p>
+<ul>
+<li><strong>Feature Space:</strong> The data is represented in a high-dimensional space where features might be combined non-linearly.</li>
+<li><strong>Hyperplane:</strong> A linear decision boundary separating the data points of different classes.</li>
+<li><strong>Margin:</strong> The distance between the hyperplane and the closest support vectors (one from each class).</li>
+<li><strong>Support Vectors:</strong> The data points that define the margin and are most difficult to classify. Only these points contribute to the model's decision boundary.</li>
+</ul>
+<p><strong>Advantages of SVMs:</strong></p>
+<ul>
+<li><strong>Effective in high-dimensional spaces:</strong> SVMs can handle problems with many features without succumbing to the "curse of dimensionality" as easily as some other algorithms.</li>
+<li><strong>Robust to outliers:</strong> The focus on support vectors makes SVMs less sensitive to outliers in the data compared to methods that rely on all data points.</li>
+<li><strong>Flexible:</strong> Different kernel functions can be used to transform the data into a high-dimensional space, allowing SVMs to handle non-linear relationships between features.</li>
+</ul>
+<p><strong>Disadvantages of SVMs:</strong></p>
+<ul>
+<li><strong>Black box nature:</strong> SVMs can be challenging to interpret, as the decision-making process happens in a high-dimensional space.</li>
+<li><strong>Computational cost:</strong> Training SVMs can be computationally expensive, especially for large datasets.</li>
+<li><strong>Parameter tuning:</strong> Choosing the right kernel function and its hyperparameters can be crucial for optimal performance and can involve experimentation.</li>
+</ul>
+<p><strong>Common Applications of SVMs:</strong></p>
+<ul>
+<li><strong>Image classification:</strong> Identifying objects or scenes in images.</li>
+<li><strong>Text classification:</strong> Classifying text documents into different categories (e.g., spam detection, sentiment analysis).</li>
+<li><strong>Bioinformatics:</strong> Analyzing biological data like gene sequences.</li>
+</ul>
+<p><strong>Kernels for Non-linearity:</strong></p>
+<p>While SVMs inherently find linear decision boundaries, they can be applied to non-linear problems through the use of <strong>kernel functions</strong>. These functions map the data from the original feature space to a higher-dimensional space where a linear separation might be possible. Common kernel functions include:</p>
+<ul>
+<li><strong>Linear kernel:</strong> Suitable for linearly separable data.</li>
+<li><strong>Polynomial kernel:</strong> Maps data to a higher-dimensional polynomial space, allowing for non-linear decision boundaries.</li>
+<li><strong>Gaussian Radial Basis Function (RBF kernel):</strong> Projects data into a high-dimensional space using a radial basis function, enabling complex non-linear separations.</li>
+</ul>
+<p><strong>Remember:</strong></p>
+<p>SVMs are powerful tools for classification and regression, especially for high-dimensional data. However, understanding their strengths and limitations, along with careful parameter tuning, is crucial for achieving optimal performance in your specific machine learning task.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="demystifying-random-forests-ensemble-learning-bagging-and-boosting"><a class="header" href="#demystifying-random-forests-ensemble-learning-bagging-and-boosting">Demystifying Random Forests, Ensemble Learning, Bagging, and Boosting</a></h1>
+<p>Machine learning algorithms often benefit from working together! Ensemble methods combine the predictions of multiple models to create a more robust and accurate predictor. Here's a breakdown of key concepts related to ensemble learning:</p>
+<p><strong>Ensemble Learning:</strong></p>
+<p>The core idea is to train a collection of individual learners (called base learners) and then combine their predictions to produce a final prediction. This can often outperform a single, isolated model.</p>
+<p>Two prominent ensemble learning techniques are:</p>
+<ol>
+<li>
+<p><strong>Bagging (Bootstrap aggregating):</strong></p>
+<ul>
+<li>
+<p>Trains multiple base learners independently by sampling with replacement from the original data (creating bootstrap samples). This introduces variance in the training data for each learner, reducing the risk of overfitting to the specific dataset.</p>
+</li>
+<li>
+<p><strong>Random Forests:</strong> A popular bagging technique that uses decision trees as base learners. By combining many decision trees with diverse training data, random forests can achieve high accuracy and robustness.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Boosting:</strong></p>
+<ul>
+<li>
+<p>Trains base learners sequentially. Each subsequent learner focuses on improving the errors made by the previous ones. The final prediction is a weighted combination of the individual predictions from all learners.</p>
+</li>
+<li>
+<p><strong>Gradient Boosting:</strong> A widely used boosting technique that builds models in a stage-wise fashion, focusing on correcting errors from previous stages. Common implementations include XGBoost and LightGBM.</p>
+</li>
+</ul>
+</li>
+</ol>
+<p><strong>Random Forests:</strong></p>
+<p>As mentioned earlier, random forests are a specific ensemble learning technique that leverages bagging with decision trees as base learners. Here are some key points about random forests:</p>
+<ul>
+<li><strong>Training:</strong> Each tree in the forest is trained on a random subset of features (in addition to bagging with replacement from the data). This injects further diversity into the ensemble.</li>
+<li><strong>Prediction:</strong> For a new data point, the prediction is made by majority vote (classification) or averaging (regression) the predictions from each tree in the forest.</li>
+<li><strong>Advantages:</strong>
+<ul>
+<li>High accuracy and robustness to overfitting.</li>
+<li>Handles both categorical and numerical features.</li>
+<li>Provides some interpretability through feature importance scores.</li>
+</ul>
+</li>
+<li><strong>Disadvantages:</strong>
+<ul>
+<li>Can be computationally expensive to train for large datasets.</li>
+<li>May require hyperparameter tuning for optimal performance (e.g., number of trees, number of features considered at each split).</li>
+</ul>
+</li>
+</ul>
+<p><strong>Choosing Between Bagging and Boosting:</strong></p>
+<p>There's no one-size-fits-all answer, but here are some general guidelines:</p>
+<ul>
+<li><strong>Start with Bagging (Random Forests):</strong> It's often a good default choice due to its simplicity and strong performance.</li>
+<li><strong>Consider Boosting:</strong> If interpretability is less critical and you're looking for potentially higher accuracy, explore boosting techniques like Gradient Boosting.</li>
+</ul>
+<p><strong>Ensemble Learning in Action:</strong></p>
+<p>Imagine predicting customer churn (will a customer leave?).</p>
+<ul>
+<li>A single decision tree might miss some important factors influencing churn.</li>
+<li>An ensemble method, like a random forest, could combine multiple trees, each capturing slightly different patterns in the data, leading to a more robust prediction of churn.</li>
+</ul>
+<p><strong>Remember:</strong></p>
+<p>Ensemble methods offer a powerful approach to enhancing the performance of machine learning models. By leveraging the strengths of multiple learners, ensemble techniques can lead to more accurate and robust predictions for various classification and regression tasks.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="module-4"><a class="header" href="#module-4">Module 4</a></h1>
+<h2 id="deep-learning"><a class="header" href="#deep-learning">Deep Learning</a></h2>
+<ul>
+<li><a href="Module_4__Deep_Learning/./Basics_of_Deep_Learning.html">Basics of Deep Learning</a></li>
+<li><a href="Module_4__Deep_Learning/./Deep_Learning_Architectures.html">Deep Learning Architectures</a></li>
+<li><a href="Module_4__Deep_Learning/./Methodology_and_Applications.html">Methodology and Applications</a></li>
+<li><a href="Module_4__Deep_Learning/./Demonstration_of_Deep_Learning_Applications.html">Demonstration of Deep Learning Applications</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="basics-of-deep-learning"><a class="header" href="#basics-of-deep-learning">Basics of Deep Learning</a></h1>
+<p>Here's a breakdown of the basics of deep learning:</p>
+<p><strong>Deep Learning: Inspired by the Brain</strong></p>
+<p>Deep learning is a subfield of machine learning inspired by the structure and function of the human brain. It utilizes <strong>artificial neural networks (ANNs)</strong> with multiple layers of interconnected nodes (artificial neurons) to process information.</p>
+<p><strong>Core Concepts:</strong></p>
+<ul>
+<li><strong>Artificial Neurons:</strong> Simulate biological neurons. They receive inputs, apply weights, and use activation functions to generate outputs.</li>
+<li><strong>Activation Functions:</strong> Introduce non-linearity into the network, allowing it to learn complex patterns. Common examples include sigmoid and ReLU functions.</li>
+<li><strong>Multiple Layers:</strong> Deep learning models have multiple hidden layers between the input and output layers. These layers allow the network to learn increasingly complex features from the data.</li>
+</ul>
+<p><strong>Learning Process:</strong></p>
+<p>Deep learning models learn through an iterative process called <strong>backpropagation</strong>. Here's a simplified view:</p>
+<ol>
+<li><strong>Forward Pass:</strong> Input data propagates through the network, with each layer applying weights and activation functions.</li>
+<li><strong>Error Calculation:</strong> The model's prediction is compared to the actual target value. The difference (error) is calculated.</li>
+<li><strong>Backward Pass:</strong> The error is propagated backward through the network, adjusting the weights of each layer to minimize the overall error.</li>
+<li><strong>Optimization:</strong> This process repeats until the model converges (reaches a minimum error).</li>
+</ol>
+<p><strong>Types of Deep Learning Models:</strong></p>
+<ul>
+<li><strong>Convolutional Neural Networks (CNNs):</strong> Excel at image recognition and analysis by using filters to extract features from spatial data.</li>
+<li><strong>Recurrent Neural Networks (RNNs):</strong> Designed to handle sequential data like text or time series by incorporating a memory of past inputs.</li>
+<li><strong>Autoencoders:</strong> Unsupervised learning models that learn to compress data and then reconstruct it. They can be used for dimensionality reduction or anomaly detection.</li>
+</ul>
+<p><strong>Advantages of Deep Learning:</strong></p>
+<ul>
+<li><strong>High Accuracy:</strong> Deep learning models can achieve state-of-the-art performance on various tasks, especially when dealing with large amounts of data.</li>
+<li><strong>Feature Learning:</strong> Deep learning models can automatically learn features from the data, eliminating the need for manual feature engineering.</li>
+<li><strong>Flexibility:</strong> Deep learning architectures can be adapted to various tasks, including image recognition, natural language processing, and speech recognition.</li>
+</ul>
+<p><strong>Disadvantages of Deep Learning:</strong></p>
+<ul>
+<li><strong>Computational Cost:</strong> Training deep learning models can be computationally expensive and require powerful hardware like GPUs.</li>
+<li><strong>Data Requirements:</strong> Deep learning models often require large amounts of data to train effectively.</li>
+<li><strong>Black Box Nature:</strong> Deep learning models can be complex and difficult to interpret, making it challenging to understand how they arrive at their predictions.</li>
+</ul>
+<p><strong>Real-world Applications of Deep Learning:</strong></p>
+<ul>
+<li><strong>Image Recognition:</strong> Self-driving cars, facial recognition, medical image analysis.</li>
+<li><strong>Natural Language Processing:</strong> Machine translation, chatbots, sentiment analysis.</li>
+<li><strong>Speech Recognition:</strong> Voice assistants, virtual reality.</li>
+<li><strong>Recommender Systems:</strong> Product recommendations on e-commerce platforms.</li>
+</ul>
+<p><strong>Getting Started with Deep Learning:</strong></p>
+<ul>
+<li><strong>Libraries and Frameworks:</strong> Popular libraries like TensorFlow, PyTorch, and Keras provide tools for building and training deep learning models.</li>
+<li><strong>Online Courses and Resources:</strong> Numerous online resources and courses can introduce you to the fundamentals of deep learning.</li>
+</ul>
+<p><strong>Remember:</strong></p>
+<p>Deep learning is a powerful and rapidly evolving field. Understanding the core concepts and its strengths and weaknesses will equip you to leverage its potential for various applications. If you're interested in learning more, explore the resources mentioned above and delve deeper into the fascinating world of deep learning!</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="deep-learning-architectures"><a class="header" href="#deep-learning-architectures">Deep Learning Architectures</a></h1>
+<h2 id="demystifying-dnns-cnns-rnns-lstms-and-autoencoders"><a class="header" href="#demystifying-dnns-cnns-rnns-lstms-and-autoencoders">Demystifying DNNs, CNNs, RNNs, LSTMs, and Autoencoders</a></h2>
+<p>Deep learning has revolutionized various fields due to its ability to learn complex patterns from data. This power comes from unique network architectures, each suited for specific tasks. Let's delve into five key architectures:</p>
+<p><strong>1. Deep Neural Networks (DNNs):</strong></p>
+<ul>
+<li><strong>Concept:</strong> The foundation of deep learning. DNNs are multi-layered artificial neural networks (ANNs) with fully-connected layers. This means all neurons in one layer connect to all neurons in the next, creating a densely connected web.</li>
+<li><strong>Methodology:</strong> DNNs excel at learning general, non-spatial patterns from numerical data. They are often used for tasks like:
+<ul>
+<li><strong>Classification:</strong> Image recognition (with preprocessing), spam filtering, sentiment analysis.</li>
+<li><strong>Regression:</strong> Predicting stock prices, weather forecasting (considering limitations).</li>
+</ul>
+</li>
+<li><strong>Applications:</strong> DNNs serve as a building block for more specialized architectures and find use in various domains like recommender systems, fraud detection, and image recognition (after data pre-processing).</li>
+</ul>
+<p><strong>2. Convolutional Neural Networks (CNNs):</strong></p>
+<ul>
+<li><strong>Concept:</strong> Specialized for working with grid-like data, particularly images and videos. CNNs leverage filters (kernels) to extract features like edges and shapes in earlier layers. Fully-connected layers at the end handle classification or regression tasks.</li>
+<li><strong>Methodology:</strong> CNNs excel at capturing spatial relationships in data due to their convolutional filters and pooling operations that reduce parameters and improve efficiency. They are particularly effective for:
+<ul>
+<li><strong>Image Recognition:</strong> Object detection, facial recognition, scene classification.</li>
+<li><strong>Video Analysis:</strong> Action recognition, anomaly detection in videos.</li>
+</ul>
+</li>
+<li><strong>Applications:</strong> CNNs are the backbone of modern computer vision tasks, powering applications like self-driving cars, medical image analysis, and video analysis.</li>
+</ul>
+<p><strong>3. Recurrent Neural Networks (RNNs):</strong></p>
+<ul>
+<li><strong>Concept:</strong> Designed to handle sequential data like text or time series. RNNs incorporate a loop (internal memory) to process sequences and handle dependencies between elements. They process information one step at a time, keeping track of the past to understand the present.</li>
+<li><strong>Methodology:</strong> RNNs come in various flavors (LSTM, GRU) to address challenges like vanishing/exploding gradients in long sequences. They are well-suited for tasks involving:
+<ul>
+<li><strong>Natural Language Processing (NLP):</strong> Machine translation, text summarization, sentiment analysis.</li>
+<li><strong>Time Series Forecasting:</strong> Stock price prediction (considering limitations), weather forecasting.</li>
+</ul>
+</li>
+<li><strong>Applications:</strong> RNNs are a workhorse for sequential data tasks, powering applications like chatbots, speech recognition, and handwriting recognition.</li>
+</ul>
+<p><strong>4. Long Short-Term Memory (LSTM):</strong></p>
+<ul>
+<li><strong>Concept:</strong> A special type of RNN designed to overcome the vanishing/exploding gradient problem in long sequences. LSTMs have internal gating mechanisms that control information flow and allow them to learn long-term dependencies.</li>
+<li><strong>Methodology:</strong> LSTMs are particularly adept at learning long-range dependencies in sequences, making them well-suited for tasks involving:
+<ul>
+<li><strong>NLP:</strong> Machine translation (especially for longer sentences), sentiment analysis on longer documents.</li>
+<li><strong>Time Series Analysis:</strong> Anomaly detection in sensor data, video captioning.</li>
+</ul>
+</li>
+<li><strong>Applications:</strong> LSTMs excel at tasks where long-term dependencies are crucial, making them valuable for applications like machine translation, speech recognition, and time series analysis.</li>
+</ul>
+<p><strong>5. Autoencoders:</strong></p>
+<ul>
+<li><strong>Concept:</strong> Unsupervised learning models that learn compressed representations (encodings) of data. They consist of an encoder that compresses the input and a decoder that reconstructs the input from the encoded representation.</li>
+<li><strong>Methodology:</strong> By forcing the network to reconstruct the input data, autoencoders learn efficient representations that can be useful for:
+<ul>
+<li><strong>Dimensionality Reduction:</strong> Compressing data for storage or faster processing.</li>
+<li><strong>Anomaly Detection:</strong> Identifying data points that deviate significantly from the learned representation.</li>
+<li><strong>Data Pre-processing:</strong> Extracting relevant features for other deep learning models (e.g., image classification).</li>
+</ul>
+</li>
+<li><strong>Applications:</strong> Autoencoders offer valuable tools for data compression, anomaly detection, and feature extraction, which can benefit various tasks like image classification and recommender systems.</li>
+</ul>
+<p><strong>Choosing the Right Architecture:</strong></p>
+<p>The selection of a deep learning architecture depends on the specific task and data type:</p>
+<ul>
+<li><strong>For images or grid-like data:</strong> CNNs are the go-to choice.</li>
+<li><strong>For sequential data:</strong> RNNs or LSTMs are preferred.</li>
+<li><strong>For general feature learning or numerical data:</strong> DNNs can be a starting point.</li>
+<li><strong>For dimensionality reduction or data pre-processing:</strong> Autoencoders are a valuable tool.</li>
+</ul>
+<p>Remember, this is just a glimpse into the vast world of deep learning architectures. As you explore</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="methodology-and-applications"><a class="header" href="#methodology-and-applications">Methodology and Applications</a></h1>
+<p>Here's a combined response covering the methodology and applications of Deep Learning:</p>
+<p><strong>Deep Learning Methodology:</strong></p>
+<p>Deep learning involves training complex artificial neural networks (ANNs) with multiple layers to learn from data. The core process can be broken down into these steps:</p>
+<ol>
+<li><strong>Data Preparation:</strong> Collect and pre-process the data suitable for the chosen architecture (e.g., image pre-processing for CNNs, converting text to numerical representations for RNNs).</li>
+<li><strong>Model Architecture Selection:</strong> Choose an appropriate deep learning architecture based on the task and data type (CNNs for images, RNNs/LSTMs for sequences, DNNs for general patterns).</li>
+<li><strong>Model Definition:</strong> Define the network structure (number of layers, neurons per layer, activation functions) using libraries like TensorFlow or PyTorch.</li>
+<li><strong>Loss Function and Optimizer:</strong> Select a loss function (e.g., Mean Squared Error for regression, Cross-Entropy for classification) to measure prediction error and an optimizer (e.g., Adam, SGD) to update the network weights in the direction that minimizes the loss.</li>
+<li><strong>Training:</strong> Iteratively train the model by feeding data through the network, calculating the loss, and adjusting network weights using the backpropagation algorithm. This process continues until the model converges (reaches a minimum acceptable error).</li>
+<li><strong>Evaluation:</strong> Evaluate the model's performance on unseen data using metrics like accuracy (classification) or mean squared error (regression) to assess its effectiveness on real-world scenarios.</li>
+</ol>
+<p><strong>Deep Learning Applications:</strong></p>
+<p>Deep learning has revolutionized various fields due to its ability to learn complex patterns from data. Here are some prominent applications across distinct domains:</p>
+<p><strong>Computer Vision:</strong></p>
+<ul>
+<li><strong>Image Recognition and Classification:</strong> Identifying objects, faces, scenes in images (e.g., self-driving cars, product categorization).</li>
+<li><strong>Object Detection:</strong> Localizing and classifying objects within an image (e.g., detecting pedestrians in traffic, identifying anomalies in medical scans).</li>
+<li><strong>Image Segmentation:</strong> Partitioning an image into meaningful regions (e.g., segmenting tumors in medical images, separating foreground from background).</li>
+</ul>
+<p><strong>Natural Language Processing (NLP):</strong></p>
+<ul>
+<li><strong>Machine Translation:</strong> Translating text from one language to another (e.g., Google Translate, improving communication across language barriers).</li>
+<li><strong>Text Summarization:</strong> Automatically providing concise summaries of lengthy text documents.</li>
+<li><strong>Sentiment Analysis:</strong> Understanding the emotional tone of text (e.g., positive, negative, neutral) to gauge customer opinions or analyze social media trends.</li>
+<li><strong>Chatbots:</strong> Developing chatbots for customer service or virtual assistants that can understand and respond to natural language queries.</li>
+</ul>
+<p><strong>Speech Recognition:</strong></p>
+<ul>
+<li><strong>Voice Assistants:</strong> Enabling virtual assistants like Siri or Alexa to understand spoken commands and respond accordingly.</li>
+<li><strong>Automatic Speech Recognition (ASR):</strong> Transcribing spoken language into text (e.g., voice dictation software, captioning videos).</li>
+</ul>
+<p><strong>Recommender Systems:</strong></p>
+<ul>
+<li><strong>Personalization:</strong> Recommending products, movies, music, or content users might be interested in based on their past behavior and preferences.</li>
+</ul>
+<p><strong>Other Applications:</strong></p>
+<ul>
+<li><strong>Time Series Forecasting:</strong> Predicting future trends based on historical data (e.g., stock market predictions, weather forecasting).</li>
+<li><strong>Anomaly Detection:</strong> Identifying unusual patterns or outliers in data (e.g., detecting fraudulent transactions, identifying equipment failures).</li>
+<li><strong>Generative Modeling:</strong> Creating new data that resembles existing data (e.g., generating realistic images, composing music).</li>
+</ul>
+<p><strong>Choosing the Right Methodology and Application:</strong></p>
+<ul>
+<li><strong>Match the architecture to the task:</strong> Use CNNs for images/videos, RNNs/LSTMs for sequences, DNNs for general patterns, and Autoencoders for dimensionality reduction or pre-processing.</li>
+<li><strong>Consider data availability:</strong> Deep learning models often require large amounts of data for effective training.</li>
+<li><strong>Evaluate the trade-off between accuracy and computational cost:</strong> Training complex models can be computationally expensive.</li>
+</ul>
+<p><strong>The Future of Deep Learning:</strong></p>
+<p>As research progresses, deep learning is poised to become even more powerful and versatile. We can expect advancements in areas like:</p>
+<ul>
+<li><strong>Explainable AI:</strong> Making deep learning models more interpretable to understand their decision-making processes.</li>
+<li><strong>Transfer learning:</strong> Leveraging pre-trained models for faster training and improved performance on new tasks.</li>
+<li><strong>Emerging architectures:</strong> Development of novel deep learning architectures for even more complex tasks.</li>
+</ul>
+<p>Deep learning offers tremendous potential to solve challenging problems and drive innovation across various sectors. By understanding its methodology and diverse applications, you can leverage this powerful technology for your own endeavors.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="demonstration-of-deep-learning-applications"><a class="header" href="#demonstration-of-deep-learning-applications">Demonstration of Deep Learning Applications</a></h1>
+<h2 id="unveiling-the-power-of-deep-learning-through-practical-applications"><a class="header" href="#unveiling-the-power-of-deep-learning-through-practical-applications">Unveiling the Power of Deep Learning through Practical Applications</a></h2>
+<p>Deep learning has permeated various aspects of our lives, silently working behind the scenes to enhance our experiences. Here's a glimpse into some captivating applications across different domains:</p>
+<p><strong>1. Image Recognition and Classification:</strong></p>
+<ul>
+<li><strong>Problem:</strong> Imagine building a system to automatically categorize products in an e-commerce store based on images.</li>
+<li><strong>Solution:</strong> A Convolutional Neural Network (CNN) can be trained on a massive dataset of labeled images (e.g., clothing, electronics, furniture). The CNN learns to recognize features like shapes, colors, and textures, enabling it to classify new product images into the appropriate category. This can automate product categorization, improving efficiency and accuracy.</li>
+</ul>
+<p><strong>2. Natural Language Processing (NLP):</strong></p>
+<ul>
+<li><strong>Problem:</strong> Enhancing communication through machine translation.</li>
+<li><strong>Solution:</strong> Recurrent Neural Networks (RNNs), specifically LSTMs (Long Short-Term Memory), can be used for machine translation. LSTMs excel at handling the sequential nature of language and long-term dependencies between words. By training an LSTM on vast amounts of translated text pairs (e.g., English-French sentences), the model learns to translate new sentences accurately, fostering communication across languages.</li>
+</ul>
+<p><strong>3. Speech Recognition and Voice Assistants:</strong></p>
+<ul>
+<li><strong>Problem:</strong> Developing a virtual assistant that understands spoken commands.</li>
+<li><strong>Solution:</strong> Deep learning plays a crucial role in speech recognition. CNNs or RNNs can be trained on a massive dataset of audio recordings and their corresponding text transcripts. The model learns to map acoustic features in speech to the underlying words. This forms the foundation for virtual assistants like Siri or Alexa, allowing them to understand and respond to our spoken requests.</li>
+</ul>
+<p><strong>4. Recommender Systems:</strong></p>
+<ul>
+<li><strong>Problem:</strong> Personalizing product recommendations on e-commerce platforms.</li>
+<li><strong>Solution:</strong> Deep learning models like DNNs (Deep Neural Networks) can be used to analyze user behavior data (purchases, browsing history, ratings). The model learns user preferences and recommends products likely to interest them. This personalization enhances the user experience and can lead to increased sales and customer satisfaction.</li>
+</ul>
+<p><strong>5. Medical Image Analysis:</strong></p>
+<ul>
+<li><strong>Problem:</strong> Automating the detection of abnormalities in medical images (e.g., X-rays, MRI scans).</li>
+<li><strong>Solution:</strong> CNNs are particularly adept at medical image analysis. Trained on vast datasets of labeled medical images (healthy vs. diseased tissues), CNNs can learn to identify patterns indicative of abnormalities. This can assist doctors in early disease detection, improving diagnosis and treatment outcomes.</li>
+</ul>
+<p><strong>Beyond these examples, deep learning applications are continuously expanding.</strong> From self-driving cars and anomaly detection in financial transactions to generating realistic images and composing music, deep learning is shaping the future across various industries.</p>
+<p><strong>Remember:</strong></p>
+<p>These are just a few illustrations of the transformative power of deep learning. As research progresses, we can expect even more innovative applications that will revolutionize the way we interact with technology and the world around us.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="module-5"><a class="header" href="#module-5">Module 5</a></h1>
+<h2 id="applications-of-machine-learning"><a class="header" href="#applications-of-machine-learning">Applications of Machine Learning</a></h2>
+<ul>
+<li><a href="Module_5__Applications_of_Machine_Learning/./Computer_Vision.html">Computer Vision</a></li>
+<li><a href="Module_5__Applications_of_Machine_Learning/./Speech_Recognition.html">Speech Recognition</a></li>
+<li><a href="Module_5__Applications_of_Machine_Learning/./NLP.html">NLP</a></li>
+<li><a href="Module_5__Applications_of_Machine_Learning/./Advanced_topic__ChatGPT.html">Advanced topic - ChatGPT</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="computer-vision"><a class="header" href="#computer-vision">Computer Vision</a></h1>
+<p>Machine learning has a wide range of applications in computer vision, which is the field of computer science that deals with the extraction of information from images and videos. Here are some of the most common applications:</p>
+<ul>
+<li>
+<p><strong>Facial Recognition:</strong> Facial recognition is a type of computer vision technology that can identify or verify a person from a digital image or video source. It is used in a variety of applications, including security systems, social media platforms, and law enforcement.</p>
+</li>
+<li>
+<p><strong>Object Detection:</strong> Object detection is a computer vision technique that tasks computers with identifying and locating objects within images or videos. Object detection can be used for a variety of purposes, including self-driving cars, traffic monitoring, and medical imaging.</p>
+</li>
+<li>
+<p><strong>Image Classification:</strong> Image classification is a type of computer vision task that involves assigning an image to one or more categories. Image classification is used in a variety of applications, including self-driving cars, product categorization, and medical imaging.</p>
+</li>
+<li>
+<p><strong>Image Segmentation:</strong> Image segmentation is a computer vision technique that involves partitioning an image into meaningful regions. Image segmentation is used in a variety of applications, including medical imaging, self-driving cars, and robotics.</p>
+</li>
+<li>
+<p><strong>Video Analytics:</strong> Video analytics is the use of computer vision to automatically extract information from video footage. Video analytics can be used for a variety of purposes, including security surveillance, traffic monitoring, and customer behavior analysis.</p>
+</li>
+</ul>
+<p>Machine learning is a powerful tool that can be used to solve a wide range of computer vision problems. As machine learning techniques continue to develop, we can expect to see even more innovative applications in the future.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="machine-learning-applications-in-speech-recognition"><a class="header" href="#machine-learning-applications-in-speech-recognition">Machine Learning Applications in Speech Recognition</a></h1>
+<h2 id="speech-recognition"><a class="header" href="#speech-recognition">Speech Recognition</a></h2>
+<p>Speech recognition, also known as Automatic Speech Recognition (ASR), deals with converting spoken language into text. Machine learning plays a vital role in this process:</p>
+<ul>
+<li><strong>Acoustic Modeling:</strong> Machine learning algorithms are trained on vast amounts of audio data with corresponding transcripts. This helps the model learn the relationship between acoustic features in speech (e.g., pitch, formants) and the underlying phonemes (basic units of sound).</li>
+<li><strong>Language Modeling:</strong> Statistical models capture the probabilities of word sequences. This helps the model predict the most likely word sequence given the recognized sounds, improving accuracy, especially in situations with background noise or unclear pronunciations.</li>
+<li><strong>Applications:</strong>
+<ul>
+<li><strong>Virtual Assistants:</strong> Siri, Alexa, Google Assistant all rely on speech recognition for understanding user commands.</li>
+<li><strong>Voice Search:</strong> Dictating search queries on smartphones or using voice search engines.</li>
+<li><strong>Automated Captioning:</strong> Transcribing spoken content into text for accessibility or generating captions for videos.</li>
+<li><strong>Speech-to-Text Software:</strong> Tools for dictation, transcribing interviews or meetings.</li>
+</ul>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="machine-learning-applications-in-natural-language-processing-nlp"><a class="header" href="#machine-learning-applications-in-natural-language-processing-nlp">Machine Learning Applications in Natural Language Processing (NLP)</a></h1>
+<h2 id="natural-language-processing-nlp"><a class="header" href="#natural-language-processing-nlp">Natural Language Processing (NLP)</a></h2>
+<p>NLP focuses on enabling computers to understand and manipulate human language. Machine learning is at the core of many NLP tasks:</p>
+<ul>
+<li><strong>Machine Translation:</strong> Statistical machine translation models analyze vast amounts of translated text pairs to learn how to translate sentences from one language to another. Deep learning approaches like LSTMs are increasingly used for improved accuracy.</li>
+<li><strong>Text Classification:</strong> Classifying text documents into predefined categories (e.g., spam detection, sentiment analysis). Machine learning models analyze word usage patterns to categorize text.</li>
+<li><strong>Chatbots:</strong> Develop chatbots for customer service or virtual assistants by training models on conversation data. These models learn to understand user queries and respond in a natural way.</li>
+<li><strong>Text Summarization:</strong> Automatically generate concise summaries of lengthy documents. Machine learning models identify key points and condense the information while preserving the main ideas.</li>
+<li><strong>Sentiment Analysis:</strong> Understanding the emotional tone of text (positive, negative, neutral) to gauge customer opinions or analyze social media trends. Sentiment analysis models consider word choices and context to determine sentiment.</li>
+<li><strong>Named Entity Recognition (NER):</strong> Identifying and classifying named entities in text (e.g., people, organizations, locations). NER models are helpful for information extraction tasks and data organization.</li>
+<li><strong>Part-of-Speech Tagging:</strong> Assigning grammatical tags (nouns, verbs, adjectives) to words in a sentence. This helps computers understand the structure and meaning of sentences.</li>
+<li><strong>Applications:</strong>
+<ul>
+<li><strong>Search Engines:</strong> NLP helps search engines understand user queries and retrieve relevant results.</li>
+<li><strong>Social Media Analysis:</strong> Analyzing public sentiment and brand perception on social media platforms.</li>
+<li><strong>Customer Service Chatbots:</strong> Providing automated customer support through chat interfaces.</li>
+<li><strong>Machine Translation Tools:</strong> Google Translate and other translation services rely on NLP for accurate translation.</li>
+<li><strong>Content Recommendation Systems:</strong> Recommending news articles, products, or videos based on a user's past behavior and interests (analyzing text reviews or descriptions).</li>
+</ul>
+</li>
+</ul>
+<p><strong>The Future of Speech Recognition and NLP:</strong></p>
+<p>As machine learning continues to evolve, we can expect even more sophisticated applications in speech recognition and NLP. Advancements in areas like deep learning and transfer learning will lead to:</p>
+<ul>
+<li><strong>More Natural Language Interactions:</strong> Virtual assistants and chatbots that can engage in more natural and nuanced conversations.</li>
+<li><strong>Improved Speech Recognition Accuracy:</strong> Better handling of accents, background noise, and complex sentence structures.</li>
+<li><strong>Enhanced Text Analysis:</strong> Deeper understanding of the context and meaning within text data.</li>
+</ul>
+<p>Machine learning has transformed how we interact with computers through speech and text. As these technologies continue to develop, they hold immense potential for further revolutionizing communication and information processing.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="advanced-topic"><a class="header" href="#advanced-topic">Advanced Topic</a></h1>
+<h2 id="chatgpt"><a class="header" href="#chatgpt">ChatGPT</a></h2>
+<p>ChatGPT is an interesting example, but it's not quite an "advanced topic" in machine learning. It's a large language model (LLM) built using some advanced techniques, but the core concepts behind it are rooted in established machine learning approaches. Here's a breakdown:</p>
+<p><strong>Large Language Models (LLMs):</strong></p>
+<p>LLMs are a type of neural network trained on massive datasets of text and code. This allows them to generate human-quality text, translate languages, write different kinds of creative content, and answer your questions in an informative way (like me!).</p>
+<p><strong>ChatGPT:</strong></p>
+<p>ChatGPT is a specific LLM developed by OpenAI. It excels at generating conversational text and responding to prompts in a way that simulates human interaction. Here are some key aspects of ChatGPT:</p>
+<ul>
+<li><strong>Training Data:</strong> Trained on a massive dataset of text and code scraped from the internet.</li>
+<li><strong>Techniques:</strong> Employs deep learning architectures like transformers, which are adept at handling long-range dependencies in sequences (like text).</li>
+<li><strong>Capabilities:</strong>
+<ul>
+<li>Generates different creative text formats, like poems, code, scripts, musical pieces, email, letters, etc.</li>
+<li>Translates languages.</li>
+<li>Answers your questions in an informative way.</li>
+<li>Engages in conversations that can feel surprisingly human-like.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Advanced Topics in Machine Learning:</strong></p>
+<p>While ChatGPT utilizes some advanced techniques, there are other areas of machine learning research that delve deeper into theoretical and technical aspects. Here are some true "advanced topics":</p>
+<ul>
+<li><strong>Explainable AI (XAI):</strong> Developing methods to understand how machine learning models arrive at their decisions. This is crucial for building trust and ensuring fairness in AI systems.</li>
+<li><strong>Generative Adversarial Networks (GANs):</strong> Two neural networks competing against each other, with one generating new data (e.g., images) and the other trying to distinguish real data from the generated data. This can be used for creating realistic artificial data or improving the quality of existing data.</li>
+<li><strong>Reinforcement Learning:</strong> Training AI agents through trial and error in simulated environments. This allows them to learn optimal strategies for complex tasks without explicit programming.</li>
+<li><strong>Bayesian Deep Learning:</strong> Integrating Bayesian statistics with deep learning to improve model uncertainty estimation and handle limited data situations more effectively.</li>
+</ul>
+<p>These are just a few examples, and the field of machine learning is constantly evolving. As research progresses, we can expect even more groundbreaking advancements that push the boundaries of what's possible with AI.</p>
+<p><strong>Remember:</strong></p>
+<p>Understanding the core concepts of machine learning is essential to grasp the capabilities and limitations of LLMs like ChatGPT. While these models are impressive, they are just one piece of the vast and exciting world of machine learning research.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+
+            </nav>
+
+        </div>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        <script>
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+        <script>
+        window.addEventListener('load', function() {
+            MathJax.Hub.Register.StartupHook('End', function() {
+                window.setTimeout(window.print, 100);
+            });
+        });
+        </script>
+
+    </div>
+    </body>
+</html>
