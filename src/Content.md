@@ -1,0 +1,49 @@
+# Content
+
+
+### [Module 1: Programming with Python](./Module_1__Programming_with_Python/Content.md)
+
+  - [Foundations of Python Programming](./Module_1__Programming_with_Python/Foundations_of_Python_Programming.md)
+  - [Data Structures, Loops, and Control Structures](./Module_1__Programming_with_Python/Data_Structures_Loops_and_Control_Structures.md)
+  - [Functional Programming in Python](./Module_1__Programming_with_Python/Functional_Programming_in_Python.md)
+  - [Linear Algebra using NumPy](./Module_1__Programming_with_Python/Linear_Algebra_using_NumPy.md)
+  - [Data Pre-processing using Pandas](./Module_1__Programming_with_Python/Data_Pre-processing_using_Pandas.md)
+  - [Data Visualisation using Matplotlib](./Module_1__Programming_with_Python/Data_Visualisation_using_Matplotlib.md)
+  - [Scikit-learn](./Module_1__Programming_with_Python/Scikit-learn.md)
+
+### [Module 2: Mathematical Foundations](./Module_2__Mathematical_Foundations/Content.md)
+
+  - [Linear Algebra](./Module_2__Mathematical_Foundations/Linear_Algebra.md)
+  - [Optimization](./Module_2__Mathematical_Foundations/Optimization.md)
+  - [Probability Theory](./Module_2__Mathematical_Foundations/Probability_Theory.md)
+
+### [Module 3: Machine Learning and Neural Networks](./Module_3__Machine_Learning_and_Neural_Networks/Content.md)
+
+  - [Introduction to AI-ML-DL & Data Analysis](./Module_3__Machine_Learning_and_Neural_Networks/Introduction_to_AI-ML-DL_&_Data_Analysis.md)
+  - [Linear Regression Model](./Module_3__Machine_Learning_and_Neural_Networks/Linear_Regression_Model.md)
+  - [Introduction - Supervised & Unsupervised Learning, Classification & Regression Models](./Module_3__Machine_Learning_and_Neural_Networks/Introduction__Supervised_&_Unsupervised_Learning_Classification_&_Regression_Models.md)
+  - [Bayesian Decision Theory - Bayesian Classifier, Discriminant Functions, Minimum Error Rate Classification](./Module_3__Machine_Learning_and_Neural_Networks/Bayesian_Decision_Theory__Bayesian_Classifier_Discriminant_Functions_Minimum_Error_Rate_Classification.md)
+  - [Naïve Bayes Theory with example](./Module_3__Machine_Learning_and_Neural_Networks/Naïve_Bayes_Theory_with_example.md)
+  - [Logistic Regression Model](./Module_3__Machine_Learning_and_Neural_Networks/Logistic_Regression_Model.md)
+  - [Parameter Estimation-Maximum Likelihood](./Module_3__Machine_Learning_and_Neural_Networks/Parameter_Estimation-Maximum_Likelihood.md)
+  - [Principal Component Aanalysis](./Module_3__Machine_Learning_and_Neural_Networks/Principal_Component_Aanalysis.md)
+  - [Non-parametric Techniques - K-Nearest Neighbors & Density Estimation](./Module_3__Machine_Learning_and_Neural_Networks/Non-parametric_Techniques__K-Nearest_Neighbors_&_Density_Estimation.md)
+  - [Decision Tree - Entropy, Gini Impurity Index](./Module_3__Machine_Learning_and_Neural_Networks/Decision_Tree__Entropy_Gini_Impurity_Index.md)
+  - [Neural Networks Components](./Module_3__Machine_Learning_and_Neural_Networks/Neural_networks_components.md)
+  - [Radial Basis Functions and K-means Clustering](./Module_3__Machine_Learning_and_Neural_Networks/Radial_Basis_Functions_and_K-means_Clustering.md)
+  - [Support Vector Machine (SVM)](./Module_3__Machine_Learning_and_Neural_Networks/Support_Vector_Machine_(SVM).md)
+  - [Random Forest, Ensemble Learning, Bagging, Boosting](./Module_3__Machine_Learning_and_Neural_Networks/Random_Forest_Ensemble_Learning_Bagging_Boosting.md)
+
+### [Module 4: Deep Learning](./Module_4__Deep_Learning/Content.md)
+
+  - [Basics of Deep Learning](./Module_4__Deep_Learning/Basics_of_Deep_Learning.md)
+  - [Deep Learning Architectures](./Module_4__Deep_Learning/Deep_Learning_Architectures.md)
+  - [Methodology and Applications](./Module_4__Deep_Learning/Methodology_and_Applications.md)
+  - [Demonstration of Deep Learning Applications](./Module_4__Deep_Learning/Demonstration_of_Deep_Learning_Applications.md)
+
+### [Module 5: Applications of Machine Learning](./Module_5__Applications_of_Machine_Learning/Content.md)
+
+  - [Computer Vision](./Module_5__Applications_of_Machine_Learning/Computer_Vision.md)
+  - [Speech Recognition](./Module_5__Applications_of_Machine_Learning/Speech_Recognition.md)
+  - [NLP](./Module_5__Applications_of_Machine_Learning/NLP.md)
+  - [Advanced topic - ChatGPT](./Module_5__Applications_of_Machine_Learning/Advanced_topic__ChatGPT.md)

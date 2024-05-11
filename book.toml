@@ -1,0 +1,9 @@
+[book]
+title = "Artifical Intelligence Machine Learning & Deep Learning in Glance"
+authors = ["Abhishek Kumar"]
+language = "en"
+multilingual = false
+src = "src"
+
+[output.html]
+mathjax-support = true
